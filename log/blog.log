@@ -1,0 +1,20 @@
+2022-06-18 11:09:32.808  INFO 16976 --- [main] c.h.EcodationFullStack3ApplicationTests  : Starting EcodationFullStack3ApplicationTests using Java 18 on DESKTOP-RTG2D08 with PID 16976 (started by Java Spring in F:\spring\EcodationFullStack3)
+2022-06-18 11:09:32.809  INFO 16976 --- [main] c.h.EcodationFullStack3ApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2022-06-18 11:09:34.445  INFO 16976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-18 11:09:34.460  INFO 16976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2022-06-18 11:09:35.358  INFO 16976 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-18 11:09:35.451  INFO 16976 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-18 11:09:35.849  INFO 16976 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-18 11:09:36.235  INFO 16976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-18 11:09:36.629  INFO 16976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-18 11:09:36.657  INFO 16976 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-06-18 11:09:37.131  INFO 16976 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-18 11:09:37.165  INFO 16976 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-18 11:09:37.869  WARN 16976 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-18 11:09:38.413  INFO 16976 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./memory_persist/denemedb'
+2022-06-18 11:09:38.577  INFO 16976 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-06-18 11:09:40.998  INFO 16976 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-06-18 11:09:41.066  INFO 16976 --- [main] c.h.EcodationFullStack3ApplicationTests  : Started EcodationFullStack3ApplicationTests in 8.675 seconds (JVM running for 11.223)
+2022-06-18 11:09:41.578  INFO 16976 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-18 11:09:41.580  INFO 16976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-18 11:09:41.583  INFO 16976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
