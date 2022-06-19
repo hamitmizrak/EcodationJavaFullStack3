@@ -1,0 +1,18 @@
+Merge-Rebase --> Dilara
+
+Aslında ikiside aynı kapıya çıkan, amacı iki branchi birleştirmek  Merge ve Rebase’in. Birbirinden ayrıldıkları nokta amaçlarına nasıl ulaştıkları.
+Projemizin bir master branchi(ana branch) ve sonnradan bizim oluşturduğumuz diğer branchleri oluyor.
+Merge yaptığmızda iki branchdeki tüm dosyalar birleşiyor ve bu branchlerin tüm historysini ulaşabiliyoruz. Yani yaptığımız tüm commit işlemlerini görebiliyoruz. Master branch, diğer branch te yapılan tüm değişiklikleri alıyor ve kendisine entegre ediyor.
+Rebase de ise rebase komutu yazılan branch diğer branchteki dosyaları kendine ekler ve tek bir commit geçmişi oluşur. Diğer branchte herhangi bir değişiklik olmuyor ve history kısmında branchlerin birleştiğine dair bir bilgi görmüyoruz.Rebase sonrasında projenizin iki farklı branch'i olduğuna dair herhangi bir tarihsel iz oluşmaz.
+Eğer tüm değişiklikleri görmek istiyorsanız merge yapmak daha mantıklı çünkü merge tüm değişiklikleri olduğu gibi korur.
+
+#########################################################################################################################################################
+
+Pull-Fetch --> Kadir
+
+
+
+#########################################################################################################################################################
+
+JDK -SDK : Aleyna
+
