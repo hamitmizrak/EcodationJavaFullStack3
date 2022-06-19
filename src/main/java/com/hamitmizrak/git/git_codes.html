@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+iyi bir commit özellikleri
+1-) hatasız kodları göndermek
+2-) çok kod olarak göndermemek birbiriyle alakasız dosyaları göndermeyin.
+3-) micro düzeyde ilermek makro komutlardan sakınmak
+
+git clone https://github.com/hamitmizrak/EcodationJavaFullStack3.git
+
+git init
+git status
+
+git add .
+git add deneme.txt
+git add java*
+
+git commit -m "1.satır"
+git commit --amend -m "1.satır revize"
+git commit -a -m "3.commit"
+
+git --help
+git log
+
+
+git branch -M main
+git remote add origin https://github.com/hamitmizrak/EcodationJavaFullStack3.git
+
+git stash
+git stash save "satashAdi"
+git stash list
+git stash apply stash@{0}
+git stash pop
+git stash drop  stash@{0}
+
+git brach
+git branch frontend
+git checkout frontend
+
+git add .
+git commit -m "yeni kod"
+git checkout main
+git merge frontend
+git merge --no-ff frontend (no fast forward)
+
+git branch
+    git branch frontend
+    git checkout frontend
+    VEYA
+    git checkout -b frontend
+git branch -D frontend ==> delete
+
+git checkout -b backend
+cat >> deneme.txt
+git add .
+git commit -m "backend"
+git push -u origin backend
+
+
+</body>
+</html>
