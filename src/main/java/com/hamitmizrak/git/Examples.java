@@ -1,4 +1,4 @@
-package com.hamitmizrak.utils;
+package com.hamitmizrak.git;
 
 public class Examples {
 

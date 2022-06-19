@@ -63,6 +63,25 @@ git add .
 git commit -m "backend"
 git push -u origin backend
 
+git tag
+git add .
+git commit -m "version1"
+git tag v1
+
+cat >> version2.txt
+git add .
+git commit -m "version2"
+git tag v2
+
+
+git checkout v1
+git checkout v2
+git checkout main
+
+git tag --delete v1 v2
+git push origin v1
+
+cat >> .gitigore  ==> git tarafından takip edilmesini istemediğimiz dosyalar için kullanılır
 
 </body>
 </html>
