@@ -1,6 +1,7 @@
 HTML5
 ##############################
 semantic- non-semantic nedir ?
+colspan ve rowspan nedir ?
 
 
 
