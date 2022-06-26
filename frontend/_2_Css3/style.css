@@ -1,12 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* responsive image  */
+
+
+/* img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2px;
+} */
+
+#icon_id {
+    font-size: 45px;
+    color: red;
+}
+
+#picture_id {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    left: 15px;
+    top: 150px;
+}
+
+#parag1 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
 #anchor_id>a {
     color: red;
     /* display-visibility */
     /* width- height çalışmaz */
-    display: inline;
+    /* display: inline; */
     /* width- height çalışır */
-    display: block;
+    /* display: block; */
     /* width- height çalışır*/
-    display: inline-block;
+    /* display: inline-block; */
     /*  
     kapladığı alanı kaybederek görünmez olur
     display: none;
@@ -15,6 +50,46 @@
     visibility: hidden;
     visibility:none
     */
+    text-decoration: none;
+    color: Red;
+    background: black;
+    padding: 15px;
+    border-radius: 12%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    color: red;
+    display: inline-block;
+    background: white;
+    padding: 3px;
+    margin: 4px;
+    box-shadow: 1px 1px 4px .5px rgb(0, 0, 0)
+}
+
+li:hover {
+    cursor: pointer;
+    background: black;
+    transition: 3s all;
+}
+
+ul>li:first-child {
+    color: black;
+}
+
+ul li:last-child {
+    color: blue;
+}
+
+ul li:nth-of-type(odd) {
+    color: orange;
+}
+
+ul li:nth-of-type(even) {
+    color: blue;
 }
 
 
@@ -26,7 +101,8 @@
     min-width: 25%;
     */
 
-.float_div {
+
+/* .float_div {
     background-color: blue;
     color: black;
     width: 23%;
@@ -37,6 +113,15 @@
 }
 
 
+/* clearfix*/
+
+.clear::before {
+    content: "";
+    clear: both;
+    display: block
+}
+
+*/
 /*  
 span ile div arasındaki fark ?
 span: aynı satırda devam ediliyor
