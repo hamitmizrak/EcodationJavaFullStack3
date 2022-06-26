@@ -1,57 +1,95 @@
 <!doctype html>
-<html  th:lang="${#locale.language}"  xmlns:th="http://www.thymeleaf.org" >
+<html th:lang="${#locale.language}" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-      <title>Title</title>
-      <!-- Turkce karakter -->
-      <meta charset="utf-8">
+    <title>Title</title>
+    <!-- Turkce karakter -->
+    <meta charset="utf-8">
 
-      <!-- responsive design -->
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      <!-- seo -->
-      <meta name="keywords" content="html5,css3,js,jquery,bootstrap,react,javase" />
-      <meta name="description" content="" />
-      <meta name="author" content="" />
+    <!-- seo -->
+    <meta name="keywords" content="html5,css3,js,jquery,bootstrap,react,javase" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-      <!-- font-awesome -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
-      <!-- google font -->
-      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 
-      <!-- Bootstrap CSS v5.0.2 -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 
-      <!-- jquery  -->
-      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-      <!-- react libraries -->
-      <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-      <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- react libraries -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 
-<!--      <link rel="stylesheet"   th:href="@{/css/index.css}">-->
-<!--      <script th:src="@{/js/index.js}"></script>-->
-<!-- !important > inline > internal > external css -->
-<!-- internal  -->
-<!-- <style>
+    <!--      <link rel="stylesheet"   th:href="@{/css/index.css}">-->
+    <!--      <script th:src="@{/js/index.js}"></script>-->
+    <!-- !important > inline > internal > external css -->
+    <!-- internal  -->
+    <!-- <style>
       p{
             color:blue!important;
       }
 </style> -->
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="container">
-<!-- start codes -->
+    <!-- start codes -->
 
-<!-- inline css -->
-<!-- <p style="color:red;">Lorem ipsum dolor sit amet.</p> -->
 
-<p>Lorem ipsum dolor sit amet.</p>
+    <div class="float_div">1</div>
+    <div class="float_div" style="background-color:red;">2</div>
+    <div class="float_div" style="background-color:green;">3</div>
+    <div class="float_div" style=" background-color:yellow;">4</div>
 
-<!-- ends codes -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <!-- div -->
+    <!-- 
+    <div id="anchor_id ">
+        <a href=" ">1</a>
+        <a href=" ">2</a>
+        <a href=" ">3</a>
+    </div>
+
+    <div id="div1 ">
+        <p>div içindeki p</p>
+    </div>
+
+    <p id="paragraf_id "> <span id="single_id ">merhabalar</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore corrupti commodi, officiis odio quo deleniti nostrum dolorem enim eaque, aliquam soluta repellat quaerat nisi? Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Eligendi delectus nobis consectetur, doloribus quos atque suscipit, debitis provident voluptatem rem qui eveniet a numquam quod quas amet saepe quisquam nesciunt. Magni pariatur officiis repudiandae quasi! Minus
+        quia porro consectetur facilis explicabo repudiandae quasi pariatur facere nam accusamus tempore, consequatur quibusdam atque! Blanditiis id architecto modi harum eligendi, vero assumenda laboriosam. Consectetur vitae maiores sint eius quis et
+        iusto nostrum laborum, repellendus dignissimos deleniti, distinctio nihil, eum dolores sunt ex molestias porro rem reprehenderit aut pariatur vel iure nulla inventore. Fugit. Ex aliquam quisquam ab nemo velit itaque molestiae. Aspernatur expedita
+        iure ratione perspiciatis, enim reiciendis. Aliquam rerum architecto excepturi sapiente omnis dolorum rem laborum odit. Reprehenderit fuga ratione officia itaque.</p>
+ -->
+
+
+
+    <!-- inline css -->
+    <!-- <p style="color:red; ">Lorem ipsum dolor sit amet.</p> -->
+
+    <!-- <p>Lorem ipsum dolor sit amet.</p>
+<h1 id="heading_id1 ">Lorem ipsum dolor sit.</h1>
+<h1 class="heading_class1 heading_class2 ">Lorem ipsum dolor sit.</h1>
+<a href="http:// ">add 1</a>
+<a href="http:// ">add 1</a>
+<a href="http:// ">add 1</a>
+<a href="http:// ">add 1</a>
+<div><p>paragraf1</p> <p>paragraf1</p> <p>paragraf1</p></div> -->
+
+
+
+    <!-- ends codes -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js "></script>
 </body>
+
 </html>

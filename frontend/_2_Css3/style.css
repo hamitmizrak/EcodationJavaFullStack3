@@ -1,3 +1,154 @@
-p {
-    color:burlywood;
+#anchor_id>a {
+    color: red;
+    /* display-visibility */
+    /* width- height çalışmaz */
+    display: inline;
+    /* width- height çalışır */
+    display: block;
+    /* width- height çalışır*/
+    display: inline-block;
+    /*  
+    kapladığı alanı kaybederek görünmez olur
+    display: none;
+
+    kapladığı alanı kaybettirmeden görünmez olur 
+    visibility: hidden;
+    visibility:none
+    */
 }
+
+
+/* 
+    max-width enfazla 25% verebilirsin 
+    max-width: 25%;
+
+    min-width en az 25% verebilirsin  
+    min-width: 25%;
+    */
+
+.float_div {
+    background-color: blue;
+    color: black;
+    width: 23%;
+    min-height: 50px;
+    display: inline-block;
+    float: left;
+    float: right;
+}
+
+
+/*  
+span ile div arasındaki fark ?
+span: aynı satırda devam ediliyor
+div : alt satıra devam ettiriyor. 
+*/
+
+#div1 {
+    background: blue;
+    color: red;
+    color: #abf;
+    color: #123456;
+    color: rgb(198, 238, 67);
+    color: rgba(198, 238, 67, 0.8);
+    color: rgba(198, 238, 67, .9);
+    /* 
+    margin: dış boşluk oluşturmak için
+    margin-top:20px;
+    margin-right:20px;
+    margin-bottom:20px;
+    margin-left:20px; 
+    margin:20px; 
+    margin:25px 15px 13px 20px;*/
+    margin: 20px 15px;
+    /*  
+    padding: iç boşluk oluşturmak için
+    padding-top:20px;
+    padding-right:20px;
+    padding-bottom:20px;
+    padding-left:20px; 
+    padding:20px;
+    padding:25px 15px 13px 20px;*/
+    padding-right: 40px;
+    border: 2px solid yellow;
+    /* border-radius: 50%;
+    border-radius:5px;
+    /*önce yukarı mı aşağımı  sonra sol mu sağ mı ?
+    border-top-left-radius:25%;
+    border-top-right-radius:25%;
+    border-bottom-left-radius:25%;
+    border-bottom-right-radius:25%; */
+    font-size: 25px;
+    font-size: x-large;
+    font-size: 150%;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif';
+
+}
+
+#paragraf_id {
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: capitalize;
+    text-align: left;
+    text-align: right;
+    text-align: center;
+    text-align: justify;
+    text-decoration: underline;
+    text-decoration: overline;
+    text-decoration: line-through;
+    text-decoration: none;
+    text-indent: 40px;
+    word-spacing: 2;
+    letter-spacing: .5;
+    line-height: 1;
+    /* 
+    X düzleminde ==> 1px=sağa -1px=sola
+    Y düzleminde ==> 2px=sağa -2px=yukarı 
+    */
+    text-shadow: 1px .8px rgb(76, 76, 182);
+    /*
+     webkit=safari opera chrome 
+     moz=mozilla 
+     */
+    column-count: 3;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-rule: 3px solid red;
+    -webkit-column-rule: 3px solid red;
+    -moz-column-rule: 3px solid red;
+}
+
+
+/* tag ile erişmek */
+
+
+/* p {
+    color:burlywood;
+} */
+
+
+/* id */
+
+
+/* #heading_id1{
+    color:blue;
+} */
+
+
+/* #heading_id2{
+    font-size:5rem;
+} */
+
+
+/* class */
+
+
+/* .heading_class1{
+    color:orange;
+} */
+
+
+/* .heading_class2{
+    font-size:5rem;
+} */
