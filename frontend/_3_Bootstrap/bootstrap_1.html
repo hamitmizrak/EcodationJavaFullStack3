@@ -44,7 +44,188 @@
 <h1 class="text-primary text-center mt-5">Ana Sayfa</h1>
 <br>
 <hr/>
+<div class="d-grid gap-2"></div>
 
+<!-- display:inline-block: ==> d-inline-block ==> alt satıra geçmek, w-h verebiliriz  -->
+<a href="#!"  class="btn-link d-inline-block">item 1</a>
+<a href="#!" class="btn-link  d-inline-block">item 2</a>
+<a href="#!" class="btn-link  d-inline-block">item 3</a>
+<a href="#!" class="btn-link  d-inline-block">item 4</a>
+
+<br><br>
+<!-- display:inline: ==> d-inline ==> aynı satırda devam etmek,w-h işe yaramıyor    -->
+<a href="#!"  class="btn-link d-inline">item 1</a>
+<a href="#!" class="btn-link  d-inline">item 2</a>
+<a href="#!" class="btn-link  d-inline">item 3</a>
+<a href="#!" class="btn-link  d-inline">item 4</a>
+
+<br><br>
+<!-- display:block: ==> d-block ==> alt satıra geçmek  -->
+      <a href="#!"  class="btn-link d-block">item 1</a>
+      <a href="#!" class="btn-link  d-block">item 2</a>
+      <a href="#!" class="btn-link  d-block">item 3</a>
+      <a href="#!" class="btn-link  d-block">item 4</a>
+
+<!-- display:none ==> d-none ==> kaybeder-->
+<div class="d-none">
+      <a href="#!" class="btn-link">item 1</a>
+      <a href="#!" class="btn-link">item 2</a>
+      <a href="#!" class="btn-link">item 3</a>
+      <a href="#!" class="btn-link">item 4</a>
+</div>
+
+<br>
+<hr />
+<!-- 
+rounded: köşelerde açı vermek 
+rounded->0 (vermemek) -1-2-3
+rounded-top:sadece yukarıdan top,
+-->
+<div class="d-grid gap-2">
+      <div class="bg-primary w-50 border border-warning p-5 mx-auto  rounded-1"></div>
+      <div class="bg-primary w-50 border border-warning p-5 mx-auto  rounded-2"></div>
+      <div class="bg-primary w-50 border border-warning p-5 mx-auto  rounded-3"></div>
+
+      <div class="bg-primary w-50 border border-warning p-5 mx-auto  rounded-top"></div>
+      <div class="bg-primary w-50 border border-warning p-5 mx-auto  rounded-end"></div>
+      <div class="bg-primary w-50 border border-warning p-5 mx-auto  rounded-bottom"></div>
+      <div class="bg-primary w-50 border border-warning p-5 mx-auto  rounded-start"></div>
+
+      <!-- profile resmi -->
+      <div class="bg-primary w-50 border border-warning p-5 mx-auto  rounded-circle"></div>
+</div>
+
+
+
+<br>
+<hr />
+<!-- border:çerçeve -->
+<!-- 
+border border-0(border olmasın) ==> 1,2,3,4,5
+border border-5 border-primary
+border-top border-5 border-primary :sadece soldan border
+border-end border-5 border-primary :sadece sağdan border
+border-bottom border-5 border-primary :sadece alttan border
+border-start border-5 border-primary :sadece soldan border
+-->
+<div class="m-5 p-5 bg-danger w-75 border-start border-5 border-primary ">
+</div>
+<p class="display-3 text-uppercase border-bottom border-3 border-primary text-center mx-auto w-50 pt-3 pb-3 mb-4 mt-4">
+      Heading</p>
+
+<!-- gap->0-1-2-3-4-5 (içerideki tag yapıları için boşluklar) -->
+<div class="d-grid gap-3">
+      içerideki tag yapıları için boşluklar
+</div>
+
+<!-- padding:iç boşluk -->
+<!-- 
+p: padding  (iç boşluk)
+0 (yok)-1-2-3-4-5
+t: top (yukarı)
+b: bottom(aşağı)
+s: start(left)
+e: end (right)
+auto: sağdan-soldan'a göre kendini ayarla 
+-->
+<div class="d-grid gap-3">
+      <!-- her taraftan 5 birimlik dış boşluk oluştur -->
+      <div class="bg-primary text-white p-5">m-5</div>
+
+      <!-- top ,right(e), bottom,left (s) -->
+      <div class="bg-danger text-white pt-5">pt-5</div>
+      <div class="bg-warning text-white pe-5">pe-5</div>
+      <div class="bg-secondary text-white pb-5">pb-5</div>
+      <div class="bg-danger text-white ps-5">ps-5</div>
+
+      <!-- x yönünde margin -->
+      <div class="bg-success text-white px-5">px-5</div>
+      <!-- y yönünde margin -->
+      <div class="bg-warning text-white py-5">py-5</div>
+</div>
+
+
+<br>
+<hr />
+<!-- margin:dış boşluk -->
+<!-- 
+m: margin (dış boşluk)
+p: padding  (iç boşluk)
+0 (yok)-1-2-3-4-5
+t: top (yukarı)
+b: bottom(aşağı)
+s: start(left)
+e: end (right)
+auto: sağdan-soldan'a göre kendini ayarla 
+-->
+<!-- her taraftan 5 birimlik dış boşluk oluştur -->
+<div class="d-grid gap-3">
+      <div class="bg-primary text-white m-5">m-5</div>
+
+      <!-- top ,right(e), bottom,left (s) -->
+      <div class="bg-primary text-white mt-5">mt-5</div>
+      <div class="bg-primary text-white me-5">me-5</div>
+      <div class="bg-primary text-white mb-5">mb-5</div>
+      <div class="bg-primary text-white ms-5">ms-5</div>
+
+      <!-- x yönünde margin -->
+      <div class="bg-primary text-white mx-5">mx-5</div>
+      <!-- y yönünde margin -->
+      <div class="bg-primary text-white my-5">my-5</div>
+
+      <!-- auto -->
+      <div class="mx-auto bg-warning" style="width:200px">
+            Center mx-auto
+      </div>
+</div>
+
+<br>
+<hr />
+<!-- view port: ekranda görüncek kısım kadar  -->
+<div class="min-vw-100">Min-width 100vw</div>
+<div class="min-vh-100">Min-height 100vh</div>
+<div class="vw-100">Width 100vw</div>
+<div class="vh-100">Height 100vh</div>
+
+<br>
+<hr />
+<!-- height:25-50-75-100 -->
+<div style="height: 150px;">
+      <div class="h-auto d-inline-block  bg-primary">Height auto</div>
+
+      <div class="h-25   d-inline-block  bg-primary">Height 25%</div>
+      <div class="h-50   d-inline-block  bg-primary">Height 50%</div>
+      <div class="h-75   d-inline-block  bg-primary">Height 75%</div>
+      <div class="h-100  d-inline-block  bg-primary">Height 100%</div>
+</div>
+
+<!-- max-width: mw-100 -->
+<div class="mw-100 bg-warning" alt="">
+      max-width: mw-100 -> %100
+</div>
+
+<br>
+<hr />
+<!-- max-height: mh-100 -->
+<div class="bg-primary" style="height: 100px; background-color: rgba(255,0,0,.1);">
+      <div class="mh-100 bg-success" style="width: 100px; height: 200px; background-color: rgba(0,0,255,.1);">Max-height
+            100%</div>
+</div>
+
+<br>
+<hr />
+<!-- width:25-50-75-100 (%) -->
+<div class="w-auto p-3 bg-primary">Width auto</div>
+
+<div class="w-25 p-3 bg-primary">Width 25%</div>
+<div class="w-50 p-3 bg-warning">Width 50%</div>
+<div class="w-75 p-3 bg-success">Width 75%</div>
+<div class="w-100 p-3 bg-warning">Width 100%</div>
+
+
+
+<br>
+<hr />
 <!-- button -->
 <button>normal button</button>
 <button class="btn btn-primary"> button primary</button>
@@ -79,6 +260,11 @@
       <button class="btn btn-warning" type="button">inline button</button>
     </div>
 
+<!-- button ortalamak -->
+<div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-primary" type="button">orta button-1</button>
+      <button class="btn btn-primary" type="button">orta button-2</button>
+</div>
 
 <br>
 <hr/>
