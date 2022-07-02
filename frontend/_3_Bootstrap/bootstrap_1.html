@@ -39,11 +39,109 @@
       </style>
 </head>
 
-<body class="container bg-dark">
+<body class="container bg-dark44">
 <!-- start codes -->
 <h1 class="text-primary text-center mt-5">Ana Sayfa</h1>
 <br>
+<hr />
+
+<!-- table -->
+<!-- 
+      table.table.table-hover.table-striped.table-danger.table-sm table-responsive>thead>tr>th{item $}*3^^tbody>tr>td{item $}*3^^tfoot>tr>th{item $}*1-->
+      <table class="table table-hover table-striped table-danger table-sm table-responsive">
+            <thead>
+                  <tr>
+                        <th>item 1</th>
+                        <th>item 2</th>
+                        <th>item 3</th>
+                  </tr>
+            </thead>
+            <tbody>
+                  <tr>
+                        <td>item 1</td>
+                        <td>item 2</td>
+                        <td>item 3</td>
+                  </tr>
+                  <tr>
+                        <td>item 1</td>
+                        <td>item 2</td>
+                        <td>item 3</td>
+                  </tr>
+                  <tr>
+                        <td>item 1</td>
+                        <td>item 2</td>
+                        <td>item 3</td>
+                  </tr>
+            </tbody>
+            <tfoot>
+                  <tr>
+                        <th class="text-center" colspan="3">&copy;Bütün Haklar saklıdır</th>
+                  </tr>
+            </tfoot>
+      </table>
+
+<br>
+<hr />
+<!-- normal alert -->
+<div class="alert alert-primary" role="alert">
+      <strong>Alert Heading</strong>
+</div>
+
+<!-- kapanabilen alert -->
+<div class="alert alert-primary alert-dismissible fade show">
+      <button class="btn-close" data-bs-dismiss="alert"></button>
+      <p>merhabalar</p>
+</div>
+
+
+
+<br>
+<hr />
+<!-- float
+float-start:sola yaslamak
+float-end:sağa yaslamak
+-->
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, dolorum quos. Repudiandae?</p>
+<!-- <div class="d-grid gap-2"></div> -->
+<img src="countryside-6700296_640.jpg" class="img-fluid mw-100 float-start" alt="...">
+<img src="countryside-6700296_640.jpg" class="img-fluid mw-100 float-end" alt="...">
+<img src="countryside-6700296_640.jpg" class="img-fluid mw-100 float-none" alt="...">
+
+<p class="clearfix">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, dolorum quos. Repudiandae?</p>
+
+<br>
 <hr/>
+<!-- 
+ listem 
+list-group:list-style-type:none
+-->
+<ul class="list-group">
+      <li class="list-group-item bg-primary active">item 1</li>
+      <li class="list-group-item bg-danger">item 2</li>
+      <li class="list-group-item bg-warning">item 3</li>
+      <li class="list-group-item bg-primary ">item 2</li>
+      <li class="list-group-item bg-warning disabled">item 3</li>
+</ul>
+
+<br>
+<hr />
+<!-- img-fluid: ekranla büyür ve küçülür ww=max-width -->
+<img src="countryside-6700296_640.jpg" class="img-fluid mw-100 img-thumbnail img-responsive " alt="resim yok">
+
+<br>
+<hr />
+<!-- shadow: gölge -->
+<div class="d-grid gap-2">
+      <div class="bg-primary p-4"></div>
+      <div class="bg-secondary p-4 shadow"></div>
+      <div class="bg-warning p-4 shadow-sm"></div>
+      <div class="bg-warning p-4 shadow-lg"></div>
+      <div class="bg-success p-4 shadow-none"></div>
+</div>
+
+
+<br>
+<hr />
 <div class="d-grid gap-2"></div>
 
 <!-- display:inline-block: ==> d-inline-block ==> alt satıra geçmek, w-h verebiliriz  -->
