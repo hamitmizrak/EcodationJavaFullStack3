@@ -85,7 +85,13 @@ img{
 
 /* ###################################################################*/
 /* HEADER */
-
+header{
+    height: 90vh;
+    padding-top:15rem;
+    background-image: url("pictures/header.jpg");
+    background-position: 50% 50%;
+    background-size:cover;
+}
 
 
 /* ###################################################################*/
