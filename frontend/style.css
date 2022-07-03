@@ -86,11 +86,24 @@ img{
 /* ###################################################################*/
 /* HEADER */
 header{
-    height: 90vh;
+    position:relative;
+}
+
+header::before{
+    position:absolute;
+    top:0;
+    bottom:0;
+    right: 0;
+    left: 0;
+    content:"";
+
+    height: 110vh;
     padding-top:15rem;
     background-image: url("pictures/header.jpg");
     background-position: 50% 50%;
     background-size:cover;
+    opacity: .3;
+    z-index:-1;
 }
 
 
