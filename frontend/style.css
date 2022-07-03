@@ -15,7 +15,7 @@
 body{
     position: relative;
     font-family: 'Crimson Text','Josefin Sans','Quicksand', serif,sans-serif;
-    background-color: #222831;
+    background-color: #111111;
 }
 
 html{
@@ -46,6 +46,15 @@ p{
 img{
     max-width: 100%;
     height: auto;
+}
+
+
+.heading_class{
+    font-size:5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color:white;
+    margin-bottom:10rem
 }
 
 /* ##### line-clamp ##### */
@@ -92,6 +101,7 @@ header{
     position:relative;
 }
 
+/*resim arka planda blur*/
 header::before{
     position:absolute;
     top:0;
@@ -100,7 +110,7 @@ header::before{
     left: 0;
     content:"";
 
-    height: 110vh;
+    height: 40vh;
     padding-top:15rem;
     background-image: url("pictures/header.jpg");
     background-position: 50% 50%;
@@ -113,6 +123,18 @@ header::before{
 /* ###################################################################*/
 /* MAIN */
 
+/* our work */
+#our_work{
+    padding:10rem;
+}
+#our_work h3,h4,p{
+color:white;
+}
+#our_work i{
+    text-align: center;
+    color:white;
+    font-size: 5rem;
+}
 
 /* ###################################################################*/
 /* FOOTER */
