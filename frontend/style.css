@@ -63,14 +63,12 @@ img{
     -webkit-line-clamp:4;
     -webkit-box-orient: vertical;
 }
-
 .line_clamp6{
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp:6;
     -webkit-box-orient: vertical;
 }
-
 
 /* ###################################################################*/
 /* NAVBAR */
@@ -86,22 +84,27 @@ img{
     opacity: .8;
     box-shadow: 1px 1px 2px 1px rgba(255,255,255,.9);
 }
-
 #navbar_icon  i{
     font-size: 1.1rem;
     margin-right: .3rem;
     color: #ffd700;
 }
-
-
 /* ###################################################################*/
 /* HEADER */
 header{
-    position:relative;
+    height: 80vh;
+    padding-top:15rem;
+    background-image: url("pictures/header.jpg");
+    background-position: 50% 50%;
+    background-size:cover;
 }
 
 /*resim arka planda blur*/
-header::before{
+ header{
+    position:relative;
+    height: 99vh;
+} 
+ header::before{
     position:absolute;
     top:0;
     bottom:0;
@@ -109,12 +112,11 @@ header::before{
     left: 0;
     content:"";
 
-    height: 40vh;
     padding-top:15rem;
     background-image: url("pictures/header.jpg");
     background-position: 50% 50%;
     background-size:cover;
-    opacity: .3;
+    opacity: .1;
     z-index:-1;
 }
 
@@ -126,9 +128,11 @@ header::before{
 #our_work{
     padding:6rem;
 }
+
 #our_work h3,h4,p{
 color:white;
 }
+
 #our_work i{
     text-align: center;
     color:white;
@@ -136,8 +140,12 @@ color:white;
 }
 
 /* parallax_class */
+
 .parallax_class{
     position: relative;
+    height: 40rem;
+    padding:12rem;
+    text-align: center;
 }
 .parallax_class::before{
     position:absolute;
@@ -149,18 +157,15 @@ color:white;
     opacity: .3;
     z-index:-1;
 
-    height: 40rem;
     padding: 3rem;
     background-image: url("pictures/2.jpg");
     background-size: cover;
     background-color: transparent;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
-}
-.parallax_class h2{
+} 
+.parallax_class h2,h1{
     color:white;
-
 }
 
 /* ###################################################################*/
