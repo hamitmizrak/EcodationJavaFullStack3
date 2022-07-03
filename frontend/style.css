@@ -64,5 +64,22 @@ img{
 }
 
 
+/* ###################################################################*/
+
+/* NAVBAR */
+#my_logo_picture {
+    width:4.5rem;
+    border-radius: 40%;
+}
+#my_logo_picture:hover{
+    opacity: .8;
+    box-shadow: 1px 1px 2px 1px rgba(255,255,255,.9);
+}
+
+#navbar_icon  i{
+    font-size: 1.3rem;
+    margin-right: .4rem;
+    color: #ffd700;
+}
 
 
