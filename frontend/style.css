@@ -48,7 +48,6 @@ img{
     height: auto;
 }
 
-
 .heading_class{
     font-size:5rem;
     text-align: center;
@@ -125,7 +124,7 @@ header::before{
 
 /* our work */
 #our_work{
-    padding:10rem;
+    padding:6rem;
 }
 #our_work h3,h4,p{
 color:white;
