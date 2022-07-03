@@ -65,10 +65,10 @@ img{
 
 
 /* ###################################################################*/
-
 /* NAVBAR */
 #my_logo_picture {
-    width:4.5rem;
+    width:3.1rem;
+    height: 2.3rem;
     border-radius: 40%;
 }
 #my_logo_picture:hover{
@@ -77,9 +77,31 @@ img{
 }
 
 #navbar_icon  i{
-    font-size: 1.3rem;
-    margin-right: .4rem;
+    font-size: 1.1rem;
+    margin-right: .3rem;
     color: #ffd700;
 }
 
 
+/* ###################################################################*/
+/* HEADER */
+
+
+
+/* ###################################################################*/
+/* MAIN */
+
+
+/* ###################################################################*/
+/* FOOTER */
+footer{
+    min-height: 20rem;
+    width: auto;
+    background-color: #252222;
+    color:white;
+}
+
+
+#copy_right{
+    background-color: #1f1f1f;
+}
