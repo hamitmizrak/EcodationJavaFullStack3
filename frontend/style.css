@@ -135,6 +135,34 @@ color:white;
     font-size: 5rem;
 }
 
+/* parallax_class */
+.parallax_class{
+    position: relative;
+}
+.parallax_class::before{
+    position:absolute;
+    top:0;
+    bottom:0;
+    right: 0;
+    left: 0;
+    content:"";
+    opacity: .3;
+    z-index:-1;
+
+    height: 40rem;
+    padding: 3rem;
+    background-image: url("pictures/2.jpg");
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.parallax_class h2{
+    color:white;
+
+}
+
 /* ###################################################################*/
 /* FOOTER */
 footer{
