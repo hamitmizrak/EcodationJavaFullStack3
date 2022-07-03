@@ -1,1 +1,56 @@
-font-family: 'Crimson Text','Josefin Sans','Quicksand', serif,sans-serif;
+/*
+ project name: My Portfolyo Sites
+ project date: 03/07/2022
+ project author: Hamit Mızrak
+ project version: v.1
+ */
+
+ /* Common Group Selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    font-family: 'Crimson Text','Josefin Sans','Quicksand', serif,sans-serif;
+    background-color: #222831;
+}
+
+html{
+    font-size: 15px;
+}
+
+ul{
+    list-style-type:none;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    margin-left:0.8rem;
+    margin-right:0.8rem;
+    text-align: justify;
+}
+
+/* ##### line-clamp ##### */
+.line_clamp4{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp:4;
+    -webkit-box-orient: vertical;
+}
+
+.line_clamp6{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp:6;
+    -webkit-box-orient: vertical;
+}
+
+
+
+
