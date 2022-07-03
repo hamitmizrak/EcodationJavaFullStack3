@@ -36,6 +36,18 @@ p{
     text-align: justify;
 }
 
+
+.my_clear::before {
+    content: "";
+    clear: both;
+    display: block
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
 /* ##### line-clamp ##### */
 .line_clamp4{
     display: -webkit-box;
