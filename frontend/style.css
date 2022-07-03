@@ -5,7 +5,7 @@
  project version: v.1
  */
 
- /* Common Group Selector */
+/* Common Group Selector */
 *{
     margin: 0;
     padding: 0;
@@ -100,11 +100,11 @@ header{
 }
 
 /*resim arka planda blur*/
- header{
+header{
     position:relative;
     height: 99vh;
-} 
- header::before{
+}
+header::before{
     position:absolute;
     top:0;
     bottom:0;
@@ -130,7 +130,7 @@ header{
 }
 
 #our_work h3,h4,p{
-color:white;
+    color:white;
 }
 
 #our_work i{
@@ -163,7 +163,7 @@ color:white;
     background-color: transparent;
     background-repeat: no-repeat;
     background-attachment: fixed;
-} 
+}
 .parallax_class h2,h1{
     color:white;
 }
