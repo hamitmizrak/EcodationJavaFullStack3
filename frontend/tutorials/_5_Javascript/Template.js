@@ -212,7 +212,19 @@ const bilimsel=12E-2; //E+2 ==> sayının 2 tane sağına sıfır ekle
 console.log(bilimsel)
 
 //CAST
-var sayi4=Number(prompt("Lütfen bir sayı giriniz"));
+var sayi3=Number(prompt("Lütfen bir sayı giriniz"));
+
+//infinity
+let sayi4=14/0;
+console.log(sayi4);
+
+//NaN:Not A Number(Sayı değildir)
+let sayi5=14/"asd";
+console.log(sayi5);
+
+//isNaN:false dönerse sayıdır
+//it is Not A Number  ==> Bir sayı değildir
+console.log(isNaN(44)) //hayır(false) sayıdır
 
 //Sayı sistemleri
 //binary (2) => (0-1)
@@ -222,21 +234,19 @@ var sayi4=Number(prompt("Lütfen bir sayı giriniz"));
 //2-8-16 tabandan yazılan sayıyı 10 tabana çevirmede
 
 //2'lik sayıyı 10 tabanda gösterimi
-let binary=0b0101010101;
-console.log(binary)
+//let binary=0b0101010101;
+//console.log(binary)
 
 //8'lik sayıyı 10 tabanda gösterimi
-let octal=0777;
-console.log(octal)
+//let octal=0777;
+//console.log(octal)
 
 //16'lik sayıyı 10 tabanda gösterimi
 //NOT: aA-bB-cC-dD-eE-fF yazabiliriz yani buna non-case sensitive
-let hexadecimal=0xABC;
-console.log(hexadecimal)
+//let hexadecimal=0xABC;
+//console.log(hexadecimal)
 
-//infinity
-let sayi3=14/0;
-console.log(sayi3);
+
 
 
 
