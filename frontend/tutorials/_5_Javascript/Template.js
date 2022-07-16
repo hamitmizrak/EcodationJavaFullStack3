@@ -92,4 +92,30 @@ _degisken="Değişken merhabalar";
 //başına $ ve _ haricinde özel simge yazamayız.
 -+*/#degisken="Değişken merhabalar";
 
+//Operator
+// 8 bit = 1 byte
+// 1 bit (0,1)
+
+// +  ==> additional
+// -  ==> substaction
+// *  ==> multiplication
+// ** ==> exponentiation(ES6)
+// /  ==> division
+// %  ==> modules
+// ++ ==> increment
+// -- ==> deincrement
+
+// logic operator(Mantıksal Operatörler)           ==> &=VE |=VEYA
+// mathematics operator (matematiksel operatörler) ==> x**y=x üzerine y,  + - * /=bölüm %=bölümünden kalan
+// comparation  operator                           ==> (> >= < <= ! == ===)
+// postfix increment                               ==> X++
+// postfix deincrement                             ==> X--
+// pre increment                                   ==> ++X
+// pre deincrement                                 ==> --X
+
+// ! = değil 
+
+// =    ==> ATAMA
+// ==   ==> EŞİT (Türe bakmıyor sadece eşitliğe   bakıyor) ==> 4="4" ==> SONUÇ EŞİT
+// ===  ==> EŞİT (Türe bakıyor  ve     eşitliğede bakıyor) ==> 4="4" ==> SONUÇ EŞİTDEĞİL
 
