@@ -29,7 +29,6 @@ deneme=66+14;
 var deneme;
 console.log(deneme)
 
-
 console.log("***************")
 
 //variable data type
@@ -48,5 +47,49 @@ console.log(typeof kelime)
 kelime=true; //boolean
 console.log(typeof kelime)
 
+console.log("***************")
 
-//variable common rules
+//Çıktı
+console.log("Console : console.log");
+console.warn("Console : console.warn");
+console.error("Console : console.error");
+console.info("Console : console.info");
+
+//alert
+window.alert(" window.alert");
+alert(" alert");
+
+//prompt kullanıcıdan veri almak
+var result = prompt("Kullanıdan veri almak için")
+document.write(result + " document.write")
+
+//variable declaration: değer atamadan sadece değişken oluşturma işlemine denir
+var number;
+console.log(number)
+
+//variable initialization: ilk değer ataması yapmaya denir.
+//toplama  etkisiz eleman: 0
+//çarpmada etkisiz eleman: 1
+var toplam=0;
+
+//variable common rules (Syntax rules)
+var degisken="Değişken merhabalar";
+//değişkenlerde:
+//Türkçe karakter olan: üğşçöıİ kullanmayalım 
+//değişken isimlerini camelCase kullanalım.
+var degiskenAdiKullanimi="camel case";
+
+//sonuna sayı yazabiliriz.
+degisken44="Değişken merhabalar";
+
+//başına sayı yazamayız.
+44degisken="Değişken merhabalar";
+
+//başına $ ve _ yazabiliriz.
+$degisken="Değişken merhabalar";
+_degisken="Değişken merhabalar";
+
+//başına $ ve _ haricinde özel simge yazamayız.
+-+*/#degisken="Değişken merhabalar";
+
+
