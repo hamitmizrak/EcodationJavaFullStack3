@@ -250,31 +250,87 @@ console.log()
 ////////////////////////////////////////////////////////////
 //METİNSEL
 //boşluk bir karakterdir
-const metinsel = "Html5 Css3 Bootstrap~Responsive Html5 ";
-console.log("Harf sayısı: " + metinsel.length);
-console.log("Trim Harf sayısı: " + metinsel.trim().length);
-console.log("Hepsi Büyük Harf: " + metinsel.toUpperCase());
-console.log("Hepsi Küçük Harf: " + metinsel.toLowerCase());
-console.log("Başlamak: " + metinsel.startsWith("H"));
-console.log("Bitmek: " + metinsel.endsWith(" "));
-console.log(metinsel.concat("-sona ekle"));
+// const metinsel = "Html5 Css3 Bootstrap~Responsive Html5 ";
+// console.log("Harf sayısı: " + metinsel.length);
+// console.log("Trim Harf sayısı: " + metinsel.trim().length);
+// console.log("Hepsi Büyük Harf: " + metinsel.toUpperCase());
+// console.log("Hepsi Küçük Harf: " + metinsel.toLowerCase());
+// console.log("Başlamak: " + metinsel.startsWith("H"));
+// console.log("Bitmek: " + metinsel.endsWith(" "));
+// console.log(metinsel.concat("-sona ekle"));
 
-//substring: sıfırdan başlar
-console.log("parçala: " + metinsel.substring(1));
-console.log("parçala: " + metinsel.substring(0, 4)); //0<=X<=4-1
+// //substring: sıfırdan başlar
+// console.log("parçala: " + metinsel.substring(1));
+// console.log("parçala: " + metinsel.substring(0, 4)); //0<=X<=4-1
 
-//charAt(): sıfırdan başlar
-console.log("Harf: " + metinsel.charAt(1));
+// //charAt(): sıfırdan başlar
+// console.log("Harf: " + metinsel.charAt(1));
 
 //indexOf-lastIndexOf: sıfırdan başlar
 //indexOf:soldan arayarak istediğimizi bulursa indis sayısı döndürür
 //lastIndexOf:sağdan arayarak istediğimizi bulursa indis sayısı döndürür
-console.log("indexof: " + metinsel.indexOf('Html5'));
-console.log("lastIndexof: " + metinsel.lastIndexOf('Html5'));
+// console.log("indexof: " + metinsel.indexOf('Html5'));
+// console.log("lastIndexof: " + metinsel.lastIndexOf('Html5'));
 
-//replace
-const yeniMetinsel = "değiştirdim ";
-console.log("replace: " + metinsel.replace(metinsel,yeniMetinsel));
+// //replace
+// const yeniMetinsel = "değiştirdim ";
+// console.log("replace: " + metinsel.replace(metinsel,yeniMetinsel));
 
+
+//ÖDEV
+// kullanıcı tarafından girilen bir kelimenin
+//S-1) Kaç karakterlidir ?
+//S-2) boşluklar alınarak Kaç karakterlidir ?
+//S-3) bütün kelimeyi küçük harfle göstermek ?
+//S-4) bütün kelimeyi büyük harfle göstermek ?
+//S-5) ilk harf nedir  ?
+//S-6) girdiğiniz kelime java ile başlıyor mu  ?
+//S-7) girdiğiniz kelimenin sonuna "-ben js öğreniyorum"   ?
+//S-8) girdiğiniz 0 ile 4 arasındaki indexi ekranda gösterin   ?
+//S-9) Kullanıcıdan alınan başka bir kelimeyle birinci olan kelimeyle yer değiştirmek ?
+
+//CAST:
+//let metin = String(44);
+
+//JSON
+// {"adı":"Hamit", "soyadı":"Mızrak"}
+//Buradaki adı ve soyadını birleştirip ekranda gösterelim ? (subString)
+
+//Örnek
+const jsonData ={
+    "adı":"Hamit",
+    "soyadı":"Mızrak"
+  }
+
+//1-) static  Gösterim
+const staticData= "{\"adı\":\"Hamit\", \"soyadı\":\"Mızrak\"}";
+const nameData=staticData.substring(8,13)
+console.log(nameData)
+const surnameData=staticData.substring(26,26+6)
+console.log(surnameData)
+
+console.log("************************")
+
+//2-) static  Gösterim
+const staticData2= "{\"adı\":\"Hamit\", \"soyadı\":\"Mızrak\"}";
+const nameData2=staticData2.substring(staticData2.indexOf("Hamit"),13)
+console.log(nameData2)
+const surnameData2=staticData2.substring(staticData2.indexOf("Mızrak"),26+6)
+console.log(surnameData2)
+
+console.log("************************")
+
+//2-) dinamic Gösterim
+//JSON ==> String'e çevirmek
+let dynamics=JSON.stringify(jsonData);
+console.log(dynamics)
+
+let parse=JSON.parse(JSON.stringify(jsonData));
+
+const nameDynamic1=parse.adı;
+console.log(nameDynamic1)
+
+const nameDynamic2=parse.soyadı;
+console.log(nameDynamic2)
 
 
