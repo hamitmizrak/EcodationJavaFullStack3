@@ -114,7 +114,7 @@ multiple comment
 // pre increment                                   ==> ++X
 // pre deincrement                                 ==> --X
 
-// ! = değil 
+// ! = değil
 
 // =    ==> ATAMA
 // ==   ==> EŞİT (Türe bakmıyor sadece eşitliğe   bakıyor) ==> 4="4" ==> SONUÇ EŞİT
@@ -136,7 +136,7 @@ multiple comment
 //kullanıcıdan alına 2 sayıyı dört işlem yapan algoritma yazınız ?
 
 //undefined
-//tanımsız anlamına gelir ve eğer değişkene başlangıç değer vermezsek 
+//tanımsız anlamına gelir ve eğer değişkene başlangıç değer vermezsek
 // var result;
 // console.log(result)
 
@@ -158,30 +158,87 @@ multiple comment
 // single quote ==> Tek Tırnak
 // double quote ==> Çift Tırnak
 // \t ==> backspace
-// \n=new 
+// \n=new
 //console.log("\"\n\tdeneme")
 
 ////////////////////////////////////////////////////////////
 //Math: önceden yazılmış matematiksel problemler için kullanıyoruz.
 
-//sabit sayı
-console.log("PI:"+Math.PI);
-console.log("E:"+Math.E);
+// //sabit sayı
+// console.log("PI:"+Math.PI);
+// console.log("E:"+Math.E);
 
-//MAth
-console.log("en küçüğü:"+Math.min(1,5,-55,96));
-console.log("en büyüğü:"+Math.max(1,5,-55,96));
-console.log("karekök:"+Math.sqrt(25));
-console.log("üslü:"+Math.pow(2,5));
-console.log("mutlak:"+Math.abs(-5));
+// //Math
+// console.log("en küçüğü:"+Math.min(1,5,-55,96));
+// console.log("en büyüğü:"+Math.max(1,5,-55,96));
+// console.log("karekök:"+Math.sqrt(25));
+// console.log("üslü:"+Math.pow(2,5));
+// console.log("mutlak:"+Math.abs(-5));
 
-//yuvarlama
-console.log("üste yuvarla:"+Math.ceil(2.1));
-console.log("aşağı yuvarla:"+Math.floor(2.9));
-console.log("üste-aşağı yuvarla:"+Math.round(2.5));
+// //yuvarlama
+// console.log("üste yuvarla:"+Math.ceil(2.1));
+// console.log("aşağı yuvarla:"+Math.floor(2.9));
+// console.log("üste-aşağı yuvarla:"+Math.round(2.5));
 
 //rastgele sayı ve iç ieç math
-console.log("rastgele:"+ Math.round(Math.random()*3+1)  );
+//console.log("rastgele:"+ Math.round(Math.random()*3+1)  );
 
 //sinus cosinus tan cot
-console.log("sin:"+Math.sin(45));
+//console.log("sin:"+Math.sin(45));
+
+// Math Ödev
+// Kullanıcıda tarafından aldığımız 2 tane sayının
+// s1-) Bu sayılardan en küçüğü nedir ?
+// s2-) Bu sayılardan en büyüğü nedir ?
+// s3-) Bu sayılardan en büyüğü karekökü nedir ?
+// s4-) Bu sayılardan en büyüğü karekökünün üste yuvarlıyalım nedir ?
+// s5-) Bu sayılardan en küçüğü mutlak değeri nedir ?
+// s6-) Bu sayılardan en küçüğü alt taban en büyüğü üst taban şeklinde üstünü alalım
+console.log()
+////////////////////////////////////////////////////////////
+//JavaScript : interpreter(Yorumlayıcı)
+//SAYILAR
+let sayi1 = 5;
+sayi1=23.44;
+console.log( sayi1);
+
+//typeof: varible türünü belirtir.
+let sayi2 = 5;
+sayi1=23.44;
+console.log(typeof sayi2);
+
+//Bilimsel
+const bilimsel=12E-2; //E+2 ==> sayının 2 tane sağına sıfır ekle
+console.log(bilimsel)
+
+//CAST
+var sayi4=Number(prompt("Lütfen bir sayı giriniz"));
+
+//Sayı sistemleri
+//binary (2) => (0-1)
+//octal(8)    => (0-1-2-3-4-5-6-7)
+//decimal(10) => (0-1-2-3-4-5-6-7-8-9)
+//hexadecimal(16) =>(0-1-2-3-4-5-6-7-8-9-a-b-c-d-e-f)
+//2-8-16 tabandan yazılan sayıyı 10 tabana çevirmede
+
+//2'lik sayıyı 10 tabanda gösterimi
+let binary=0b0101010101;
+console.log(binary)
+
+//8'lik sayıyı 10 tabanda gösterimi
+let octal=0777;
+console.log(octal)
+
+//16'lik sayıyı 10 tabanda gösterimi
+//NOT: aA-bB-cC-dD-eE-fF yazabiliriz yani buna non-case sensitive
+let hexadecimal=0xABC;
+console.log(hexadecimal)
+
+//infinity
+let sayi3=14/0;
+console.log(sayi3);
+
+
+
+////////////////////////////////////////////////////////////
+//METİNSEL
