@@ -198,57 +198,83 @@ console.log()
 ////////////////////////////////////////////////////////////
 //JavaScript : interpreter(Yorumlayıcı)
 //SAYILAR
-let sayi1 = 5;
-sayi1=23.44;
-console.log( sayi1);
+// let sayi1 = 5;
+// sayi1=23.44;
+// console.log( sayi1);
 
-//typeof: varible türünü belirtir.
-let sayi2 = 5;
-sayi1=23.44;
-console.log(typeof sayi2);
+// //typeof: varible türünü belirtir.
+// let sayi2 = 5;
+// sayi1=23.44;
+// console.log(typeof sayi2);
 
-//Bilimsel
-const bilimsel=12E-2; //E+2 ==> sayının 2 tane sağına sıfır ekle
-console.log(bilimsel)
+// //Bilimsel
+// const bilimsel=12E-2; //E+2 ==> sayının 2 tane sağına sıfır ekle
+// console.log(bilimsel)
 
-//CAST
-var sayi3=Number(prompt("Lütfen bir sayı giriniz"));
+// //CAST
+// var sayi3=Number(prompt("Lütfen bir sayı giriniz"));
 
-//infinity
-let sayi4=14/0;
-console.log(sayi4);
+// //infinity
+// let sayi4=14/0;
+// console.log(sayi4);
 
-//NaN:Not A Number(Sayı değildir)
-let sayi5=14/"asd";
-console.log(sayi5);
+// //NaN:Not A Number(Sayı değildir)
+// let sayi5=14/"asd";
+// console.log(sayi5);
 
-//isNaN:false dönerse sayıdır
-//it is Not A Number  ==> Bir sayı değildir
-console.log(isNaN(44)) //hayır(false) sayıdır
+// //isNaN:false dönerse sayıdır
+// //it is Not A Number  ==> Bir sayı değildir
+// console.log(isNaN(44)) //hayır(false) sayıdır
 
-//Sayı sistemleri
-//binary (2) => (0-1)
-//octal(8)    => (0-1-2-3-4-5-6-7)
-//decimal(10) => (0-1-2-3-4-5-6-7-8-9)
-//hexadecimal(16) =>(0-1-2-3-4-5-6-7-8-9-a-b-c-d-e-f)
-//2-8-16 tabandan yazılan sayıyı 10 tabana çevirmede
+// //Sayı sistemleri
+// //binary (2) => (0-1)
+// //octal(8)    => (0-1-2-3-4-5-6-7)
+// //decimal(10) => (0-1-2-3-4-5-6-7-8-9)
+// //hexadecimal(16) =>(0-1-2-3-4-5-6-7-8-9-a-b-c-d-e-f)
+// //2-8-16 tabandan yazılan sayıyı 10 tabana çevirmede
 
-//2'lik sayıyı 10 tabanda gösterimi
-//let binary=0b0101010101;
-//console.log(binary)
+// //2'lik sayıyı 10 tabanda gösterimi
+// let binary=0b0101010101;
+// console.log(binary)
 
-//8'lik sayıyı 10 tabanda gösterimi
-//let octal=0777;
-//console.log(octal)
+// //8'lik sayıyı 10 tabanda gösterimi
+// let octal=0777;
+// console.log(octal)
 
-//16'lik sayıyı 10 tabanda gösterimi
-//NOT: aA-bB-cC-dD-eE-fF yazabiliriz yani buna non-case sensitive
-//let hexadecimal=0xABC;
-//console.log(hexadecimal)
+// //16'lik sayıyı 10 tabanda gösterimi
+// //NOT: aA-bB-cC-dD-eE-fF yazabiliriz yani buna non-case sensitive
+// let hexadecimal=0xABC;
+// console.log(hexadecimal)
 
-
-
-
-
+console.log()
 ////////////////////////////////////////////////////////////
 //METİNSEL
+//boşluk bir karakterdir
+const metinsel = "Html5 Css3 Bootstrap~Responsive Html5 ";
+console.log("Harf sayısı: " + metinsel.length);
+console.log("Trim Harf sayısı: " + metinsel.trim().length);
+console.log("Hepsi Büyük Harf: " + metinsel.toUpperCase());
+console.log("Hepsi Küçük Harf: " + metinsel.toLowerCase());
+console.log("Başlamak: " + metinsel.startsWith("H"));
+console.log("Bitmek: " + metinsel.endsWith(" "));
+console.log(metinsel.concat("-sona ekle"));
+
+//substring: sıfırdan başlar
+console.log("parçala: " + metinsel.substring(1));
+console.log("parçala: " + metinsel.substring(0, 4)); //0<=X<=4-1
+
+//charAt(): sıfırdan başlar
+console.log("Harf: " + metinsel.charAt(1));
+
+//indexOf-lastIndexOf: sıfırdan başlar
+//indexOf:soldan arayarak istediğimizi bulursa indis sayısı döndürür
+//lastIndexOf:sağdan arayarak istediğimizi bulursa indis sayısı döndürür
+console.log("indexof: " + metinsel.indexOf('Html5'));
+console.log("lastIndexof: " + metinsel.lastIndexOf('Html5'));
+
+//replace
+const yeniMetinsel = "değiştirdim ";
+console.log("replace: " + metinsel.replace(metinsel,yeniMetinsel));
+
+
+
