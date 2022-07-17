@@ -343,54 +343,174 @@ console.log(nameDynamic2)
 
 //yazım şekli
 //1-) retursuz Parametresiz Function
-function retursuzParametresiz() {
-  console.log("1-retursuz parametresiz function");
+// function retursuzParametresiz() {
+//   console.log("1-retursuz parametresiz function");
+// }
+// retursuzParametresiz();
+
+// //2-) returnsuz Parametreli Function
+// function retursuzParametreli(data) {
+//   console.log("2-retursuz parametreli function " + data);
+// }
+// retursuzParametreli("Hamit");
+
+// //3-) returnlu Parametresiz Function
+// function returluParametresiz() {
+//   return "3-returnlu parametresiz function";
+// }
+// let result3=returluParametresiz();
+// console.log(result3)
+// ///////////////////////////////////////////////////////////////////////
+// //4-) returnlu Parametreli Function
+// //Normal Function
+// function returluParametreli(nameData,surnameData) {
+//   return "4-returnlu parametreli function: "+nameData+" "+surnameData;
+// }
+// let result4=returluParametreli("Hamit","Mızrak");
+// console.log(result4)
+
+// //ES5 (Anonymous Function)
+// let anonymousFunction = function (nameData, surnameData) {
+//   return "5-anonymous fonksiyon : " + nameData + " " + surnameData;
+// }
+// let result5 = anonymousFunction("Hamit", "Mızrak");
+// //console.log(result5)
+
+// //ES6 Arrow Function
+// let arrowFunction =  (nameData, surnameData)=> {
+//   return "6-arrow function  : " + nameData + " " + surnameData;
+// }
+// let result6 = arrowFunction("Hamit", "Mızrak");
+// //console.log(result6)
+
+// //return olmayan function olmalıdır.
+// //Immediate Function
+// (function () {
+//   console.log('7-Immediate Function Anonymous')
+// })();
+
+// //Immediate Function
+// ( ()=> {
+//   console.log('8-Immediate Function Arrow Function')
+// })();
+
+/////////////////////////////////////////////////////////
+//JavaScript: Senkrondur (Aynı anda sadece 1 tane iş yapar) şeklinde çalışır Single Thread
+
+//senkron: bir işlem biter diğerine geçer. Sırayla çalışır.
+//Asenkron aynı anda birden fazla process(iş) demektir
+//JavaScript Asenkron çalışabilmesi için şunları yapabiliriz.
+//1-)basic Asenkron-Senkron
+//2-)callBack function
+//3-)setTimeOut() ==> function istediğimiz zaman aralığında çalışmasını sağlarız.
+//4-)promise
+//5-)async await
+
+///////////////////////////////////
+//Asenkron çözümümüz
+//1-)basic Asenkron-Senkron :
+//Kullanıcıdan alınan sayının karekökü
+// function birinci(number) {
+//   console.log("birinci function")
+//   console.log(Math.sqrt(number))
+// }
+
+// function ikinci() {
+//   const userData = Math.round(Math.abs(Number(prompt("Lütfen bir sayı giriniz"))));
+//   console.log("ikinci function");
+//   birinci(userData);
+// }
+// ikinci();
+
+// ///////////////////////////////////
+
+// //2-) CallBackFunction
+// //Kullanıcıdan alınan sayının karekökü
+// function birinci(number) {
+//   console.log("birinci function")
+//   console.log(Math.sqrt(number))
+// }
+
+// function ikinci(callback) {
+//   const userData = Math.round(Math.abs(Number(prompt("Lütfen bir sayı giriniz"))));
+//   console.log("ikinci function");
+//   callback(userData);
+// }
+// ikinci(birinci);
+
+// ////////////////////////////////////
+
+
+// //2-)setTimeOut(Body,timerMS)
+// //1000ms = 1sn
+// //2.1-)Normal setTimeOut
+// function setTimeOutFunction() {
+//   console.log("Normal setTimeOut")
+// }
+// setTimeout(setTimeOutFunction, 3000);
+
+// //2.2-)Anonymous function setTimeOut
+// setTimeout(function () {
+//   console.log("Anonymous function setTimeOut")
+// }, 2000);
+
+// //2.3-)Arrow function setTimeOut
+// setTimeout(() => {
+//   console.log("Arrow function setTimeOut")
+// }, 3000);
+
+///////////////////////////////////
+
+//conditional (Karar mekanizması):
+//if else (sadece 2 seçeneğimiz varsa)
+// eğer veriler arasında karar vermek zorunda kalırsa yani birden fazla yol var ama hangisine gideceğini bilmiyorsam
+// if (3 > 1) {
+//   //Eğer şart doğruysa bu scope
+// } else {
+//   //Değilse  bu scope
+// }
+
+// //verdiğimiz String sayıya ve pozitif bir sayı olsun
+// function stringToNumberPositive(number) {
+//   return Math.abs(Number(number));
+// }
+
+// const number = stringToNumberPositive(16);
+// //1.Gösterim
+// if (number > 10) {
+//   console.log(number + " sayısı 10'dan büyüktür")
+// } else {
+//   console.log(number + " sayısı 10'dan küçüktür")
+// }
+
+// //2.Gösterim
+// if (number > 10)
+//   console.log(number + " sayısı 10'dan büyüktür")
+// else
+//   console.log(number + " sayısı 10'dan küçüktür")
+
+// //3.Gösterim (Ternary)
+// let result = (number > 10) ? number + " sayısı 10'dan büyüktür" : number + " sayısı 10'dan küçüktür";
+// console.log(result)
+//////////////////////////////////////////////
+//conditional (Karar mekanizması):
+//if elseif() ... else (seçeneğimiz 2'den fazla ise)
+// eğer veriler arasında karar vermek zorunda kalırsa yani birden fazla yol var ama hangisine gideceğini bilmiyorsam
+
+//if else if() else
+const hours = new Date().getHours();
+if (hours == 5) {
+  console.log("saat: 5")
+} else if (hours == 6) {
+  console.log("saat: 6")
+} else if (hours == 7) {
+  console.log("saat: 7")
+} else if (hours == 8) {
+  console.log("saat: 8")
+} else if (hours == 9) {
+  console.log("saat: 9")
+} else if (hours == 10) {
+  console.log("saat: 10")
+} else {
+  console.log("saat dışında bir rakam girildi")
 }
-retursuzParametresiz();
-
-//2-) returnsuz Parametreli Function
-function retursuzParametreli(data) {
-  console.log("2-retursuz parametreli function " + data);
-}
-retursuzParametreli("Hamit");
-
-//3-) returnlu Parametresiz Function
-function returluParametresiz() {
-  return "3-returnlu parametresiz function";
-}
-let result3=returluParametresiz();
-console.log(result3)
-///////////////////////////////////////////////////////////////////////
-//4-) returnlu Parametreli Function
-//Normal Function
-function returluParametreli(nameData,surnameData) {
-  return "4-returnlu parametreli function: "+nameData+" "+surnameData;
-}
-let result4=returluParametreli("Hamit","Mızrak");
-console.log(result4)
-
-//ES5 (Anonymous Function)
-let anonymousFunction = function (nameData, surnameData) {
-  return "5-anonymous fonksiyon : " + nameData + " " + surnameData;
-}
-let result5 = anonymousFunction("Hamit", "Mızrak");
-//console.log(result5)
-
-//ES6 Arrow Function
-let arrowFunction =  (nameData, surnameData)=> {
-  return "6-arrow function  : " + nameData + " " + surnameData;
-}
-let result6 = arrowFunction("Hamit", "Mızrak");
-//console.log(result6)
-
-//return olmayan function olmalıdır.
-//Immediate Function
-(function () {
-  console.log('7-Immediate Function Anonymous')
-})();
-
-
-//Immediate Function
-( ()=> {
-  console.log('8-Immediate Function Arrow Function')
-})();
