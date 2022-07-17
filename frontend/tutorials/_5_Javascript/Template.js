@@ -585,6 +585,7 @@ console.log(nameDynamic2)
 // bu sayılar en fazla 15 kadar olabilir (break)
 // bu sayılardan çift olanların kaç tane ve toplamları nedir ?
 // bu sayılardan tek olanların kaç tane ve toplamları nedir ?
+// secret-Key kullanıcı eğer 44 girerse hiç bir işlem yapmadan sistemden çıkış sağlansın onunda haricinde sürekli işlem yapsın
 // Dikkat: fonksiyonlar ile yapalım (Clean code kuralları çercevesinde ) algoritma yapan program?
 
 //user Data
@@ -594,38 +595,50 @@ let number = () => {
 }
 
 //result
-const result = function () {
+const statementData = function () {
   const data = number();
-  let oddCounter = 0, oddSum = 0, evenCounter = 0, evenSum = 0;
 
-  let sum = 0;
-  for (let i = 1; i <= data; i++) {
+  if (data == 44) {
+    console.log("secret-key girdiniz:" + data);
+    return;
+  } else {
+    let oddCounter = 0, oddSum = 0, evenCounter = 0, evenSum = 0;
+    let sum = 0;
+    for (let i = 1; i <= data; i++) {
 
-    //15 üstünde çalışmasın
-    if (i == 15)
-      break;
+      //15 üstünde çalışmasın
+      if (i == 15)
+        break;
 
-    //7 dahil etme
-    if (i == 7)
-      continue;
+      //7 dahil etme
+      if (i == 7)
+        continue;
 
-    //tek çift sayı adeti toplamı
-    if (i % 2 == 0) {
-      evenCounter++;
-      evenSum = evenSum + i;
-    } else if (i % 2 == 1) {
-      oddCounter++;
-      oddSum += i;
+      //tek çift sayı adeti toplamı
+      if (i % 2 == 0) {
+        evenCounter++;
+        evenSum = evenSum + i;
+      } else if (i % 2 == 1) {
+        oddCounter++;
+        oddSum += i;
+      }
+      sum += i;
     }
-    sum += i;
+    //1 2 3 4 5 6
+    // 2 4 6
+    // 1 3 5
+    console.log("toplam:" + sum);
+    console.log("Çift sayı adedi:" + evenCounter);
+    console.log("Çift sayı toplamı:" + evenSum);
+    console.log("Tek sayı adedi:" + oddCounter);
+    console.log("Tek sayı toplamı:" + oddSum);
+
   }
-  //1 2 3 4 5 6
-  // 2 4 6
-  // 1 3 5
-  console.log("toplam:" + sum);
-  console.log("Çift sayı adedi:" + evenCounter);
-  console.log("Çift sayı toplamı:" + evenSum);
-  console.log("Tek sayı adedi:" + oddCounter);
-  console.log("Tek sayı toplamı:" + oddSum);
+
+  function result() {
+
+  }
+
+
 }
 result();
