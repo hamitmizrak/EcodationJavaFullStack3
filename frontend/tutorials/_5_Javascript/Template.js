@@ -544,31 +544,88 @@ console.log(nameDynamic2)
 ///////////////////////////////////////////////////////////////////
 //Loop: Sürekli kendini tekrar eden verilerde kolaylıkla sağlaması için kullanılır.
 
-console.log("********iterative for************")
-//1-) iterative for loop
-for (let i = 1; i <= 5; i++) {
-  console.log(i)
+// console.log("********iterative for************")
+// //1-) iterative for loop
+// for (let i = 1; i <= 5; i++) {
+//   console.log(i)
+// }
+
+// //sonsuz for döngüsü
+// //for(;;){}
+// console.log("********While************")
+
+// //2-) while loop
+// let k = 1;
+// while (k <= 5) {
+//   console.log(k)
+//   k++;
+// }
+// //sonsuz while döngüsü
+// //while(true){}
+
+// console.log("********Do-While************")
+
+// //3-) do-while loop: şart sağlansın yada sağlanmasın en az 1 kez çalışır.
+// let m = 1;
+// do {
+//   console.log(m)
+//   m++;
+// }
+// while (m <= 5);
+
+///////////////////////////////////////////////////////////////////
+//return  : metotun çalışmasını durdurur
+//break   : döngünün çalışmasını durdurur
+//continue: sadece 1 kereye mahsus durur sonra devam eder.
+
+//SORU
+//1 ile Kullanıcı tarafından alın bitiş sayısına kadar toplama yapan örneğimiz
+// Örnek: 1<=user<=10 1+2+3+4+5+6+7+8+9+10
+// Bu sayılardan 7 sayıyı varsa bunu toplayama dahil etmesin (continue)
+// bu sayılar en fazla 15 kadar olabilir (break)
+// bu sayılardan çift olanların kaç tane ve toplamları nedir ?
+// bu sayılardan tek olanların kaç tane ve toplamları nedir ?
+// Dikkat: fonksiyonlar ile yapalım (Clean code kuralları çercevesinde ) algoritma yapan program?
+
+//user Data
+let number = () => {
+  const number = Math.abs(Number(prompt("Lütfen bitiş sayısı giriniz")));
+  return number;
 }
 
-//sonsuz for döngüsü
-//for(;;){}
-console.log("********While************")
+//result
+const result = function () {
+  const data = number();
+  let oddCounter = 0, oddSum = 0, evenCounter = 0, evenSum = 0;
 
-//2-) while loop
-let k = 1;
-while (k <= 5) {
-  console.log(k)
-  k++;
+  let sum = 0;
+  for (let i = 1; i <= data; i++) {
+
+    //15 üstünde çalışmasın
+    if (i == 15)
+      break;
+
+    //7 dahil etme
+    if (i == 7)
+      continue;
+
+    //tek çift sayı adeti toplamı
+    if (i % 2 == 0) {
+      evenCounter++;
+      evenSum = evenSum + i;
+    } else if (i % 2 == 1) {
+      oddCounter++;
+      oddSum += i;
+    }
+    sum += i;
+  }
+  //1 2 3 4 5 6
+  // 2 4 6
+  // 1 3 5
+  console.log("toplam:" + sum);
+  console.log("Çift sayı adedi:" + evenCounter);
+  console.log("Çift sayı toplamı:" + evenSum);
+  console.log("Tek sayı adedi:" + oddCounter);
+  console.log("Tek sayı toplamı:" + oddSum);
 }
-//sonsuz while döngüsü
-//while(true){}
-
-console.log("********Do-While************")
-
-//3-) do-while loop: şart sağlansın yada sağlanmasın en az 1 kez çalışır.
-let m = 1;
-do {
-  console.log(m)
-  m++;
-}
-while (m <= 5);
+result();
