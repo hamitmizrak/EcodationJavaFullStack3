@@ -297,6 +297,7 @@ console.log()
 //Buradaki adı ve soyadını birleştirip ekranda gösterelim ? (subString)
 
 //Örnek
+/*
 const jsonData ={
     "adı":"Hamit",
     "soyadı":"Mızrak"
@@ -320,7 +321,7 @@ console.log(surnameData2)
 
 console.log("************************")
 
-//2-) dinamic Gösterim
+//3-) dinamic Gösterim
 //JSON ==> String'e çevirmek
 let dynamics=JSON.stringify(jsonData);
 console.log(dynamics)
@@ -332,5 +333,38 @@ console.log(nameDynamic1)
 
 const nameDynamic2=parse.soyadı;
 console.log(nameDynamic2)
+*/
 
+
+/////////////////////////////////////
+//Function:
+// sürekli aynı yazdımız kod tekrarını önlemek,
+// clean code mantığında ilerlememize olanak sağlar.
+
+//yazım şekli
+//1-) retursuz Parametresiz Function
+function retursuzParametresiz() {
+  console.log("1-retursuz parametresiz function");
+}
+retursuzParametresiz();
+
+//2-) returnsuz Parametreli Function
+function retursuzParametreli(data) {
+  console.log("2-retursuz parametreli function " + data);
+}
+retursuzParametreli("Hamit");
+
+//3-) returnlu Parametresiz Function
+function returluParametresiz() {
+  return "3-returnlu parametresiz function";
+}
+let result3=returluParametresiz();
+console.log(result3)
+
+//4-) returnlu Parametreli Function
+function returluParametreli(nameData,surnameData) {
+  return "4-returnlu parametreli function: "+nameData+" "+surnameData;
+}
+let result4=returluParametreli("Hamit","Mızrak");
+console.log(result4)
 
