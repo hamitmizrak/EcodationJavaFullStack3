@@ -246,7 +246,7 @@ console.log()
 // let hexadecimal=0xABC;
 // console.log(hexadecimal)
 
-console.log()
+//console.log()
 ////////////////////////////////////////////////////////////
 //METİNSEL
 //boşluk bir karakterdir
@@ -360,11 +360,37 @@ function returluParametresiz() {
 }
 let result3=returluParametresiz();
 console.log(result3)
-
+///////////////////////////////////////////////////////////////////////
 //4-) returnlu Parametreli Function
+//Normal Function
 function returluParametreli(nameData,surnameData) {
   return "4-returnlu parametreli function: "+nameData+" "+surnameData;
 }
 let result4=returluParametreli("Hamit","Mızrak");
 console.log(result4)
 
+//ES5 (Anonymous Function)
+let anonymousFunction = function (nameData, surnameData) {
+  return "5-anonymous fonksiyon : " + nameData + " " + surnameData;
+}
+let result5 = anonymousFunction("Hamit", "Mızrak");
+//console.log(result5)
+
+//ES6 Arrow Function
+let arrowFunction =  (nameData, surnameData)=> {
+  return "6-arrow function  : " + nameData + " " + surnameData;
+}
+let result6 = arrowFunction("Hamit", "Mızrak");
+//console.log(result6)
+
+//return olmayan function olmalıdır.
+//Immediate Function
+(function () {
+  console.log('7-Immediate Function Anonymous')
+})();
+
+
+//Immediate Function
+( ()=> {
+  console.log('8-Immediate Function Arrow Function')
+})();
