@@ -595,50 +595,93 @@ let number = () => {
 }
 
 //result
-const statementData = function () {
-  const data = number();
+const statementData = function (data) {
+  let oddCounter = 0, oddSum = 0, evenCounter = 0, evenSum = 0;
+  let sum = 0;
+  for (let i = 1; i <= data; i++) {
 
+    //15 üstünde çalışmasın
+    if (i == 15)
+      break;
+
+    //7 dahil etme
+    if (i == 7)
+      continue;
+
+    //tek çift sayı adeti toplamı
+    if (i % 2 == 0) {
+      evenCounter++;
+      evenSum = evenSum + i;
+    } else if (i % 2 == 1) {
+      oddCounter++;
+      oddSum += i;
+    }
+    sum += i;
+  }
+  console.log("toplam:" + sum);
+  console.log("Çift sayı adedi:" + evenCounter);
+  console.log("Çift sayı toplamı:" + evenSum);
+  console.log("Tek sayı adedi:" + oddCounter);
+  console.log("Tek sayı toplamı:" + oddSum);
+}
+
+//result
+let result = () => {
+  const data = number();
   if (data == 44) {
     console.log("secret-key girdiniz:" + data);
     return;
   } else {
-    let oddCounter = 0, oddSum = 0, evenCounter = 0, evenSum = 0;
-    let sum = 0;
-    for (let i = 1; i <= data; i++) {
-
-      //15 üstünde çalışmasın
-      if (i == 15)
-        break;
-
-      //7 dahil etme
-      if (i == 7)
-        continue;
-
-      //tek çift sayı adeti toplamı
-      if (i % 2 == 0) {
-        evenCounter++;
-        evenSum = evenSum + i;
-      } else if (i % 2 == 1) {
-        oddCounter++;
-        oddSum += i;
-      }
-      sum += i;
-    }
-    //1 2 3 4 5 6
-    // 2 4 6
-    // 1 3 5
-    console.log("toplam:" + sum);
-    console.log("Çift sayı adedi:" + evenCounter);
-    console.log("Çift sayı toplamı:" + evenSum);
-    console.log("Tek sayı adedi:" + oddCounter);
-    console.log("Tek sayı toplamı:" + oddSum);
-
+    statementData(data);
   }
+}
+//result();
 
-  function result() {
+//////////////////////////////////////////////////////
+//"use strict" //ES5 göre uyarlıyoruz.
 
-  }
 
+//////////////////////////////////////////////////////
+
+// Date: Tarih bilgisini verir.
+// GET
+let dateGetTutorials = () => {
+  let tarih = new Date();
+  //let tarih = new Date().getDay();
+  console.log(tarih);
+  console.log("GMT:" + tarih.toUTCString());
+  console.log("String:" + tarih.toDateString());
+
+  console.log("YIL:" + tarih.getFullYear());
+  console.log("AY:" + tarih.getMonth());  //Aylar 0 başlar 
+  console.log("Gün:" + tarih.getDay()); //Gün: pazar:0 başlar
+  console.log("SAAT:" + tarih.getHours());
+  console.log("DAKİKA:" + tarih.getMinutes());
+  console.log("SANİYE:" + tarih.getSeconds());
+  console.log("MİLİSANİYE:" + tarih.getMilliseconds());
+}
+//dateGetTutorials();
+
+// SET
+let dateSetTutorials = () => {
+  //yıl ay gün saat dakika saniye milisaniye
+  let tarih1 = new Date(2019, 5, 12, 10, 15, 30, 500);
+  console.log("tarih 1: " + tarih1);
+
+  //gün ay yıl
+  let tarih2 = new Date("01 12 2015");
+  console.log("Tarih 2: " + tarih2);
+
+  //set
+  let tarih3 = new Date();
+  tarih3.setFullYear(1999);
+  tarih3.setMonth(6);
+  tarih3.setDate(0);
+  tarih3.setHours(23);
+  tarih3.setMinutes(59);
+  tarih3.setSeconds(59);
+  tarih3.setMilliseconds(999);
+  console.log("Tarih 3: " + tarih3);
 
 }
-result();
+dateSetTutorials();
