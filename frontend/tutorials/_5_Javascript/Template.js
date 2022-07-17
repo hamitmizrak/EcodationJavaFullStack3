@@ -497,46 +497,78 @@ console.log(nameDynamic2)
 //if elseif() ... else (seçeneğimiz 2'den fazla ise)
 // eğer veriler arasında karar vermek zorunda kalırsa yani birden fazla yol var ama hangisine gideceğini bilmiyorsam
 
-//if else if() else
-const hours = new Date().getHours();
-if (hours == 5) {
-  console.log("saat: 5")
-} else if (hours == 6) {
-  console.log("saat: 6")
-} else if (hours == 7) {
-  console.log("saat: 7")
-} else if (hours == 8) {
-  console.log("saat: 8")
-} else if (hours == 9) {
-  console.log("saat: 9")
-} else if (hours == 10) {
-  console.log("saat: 10")
-} else {
-  console.log("saat dışında bir rakam girildi")
+// //if else if() else
+// const hours = new Date().getHours();
+// if (hours == 5) {
+//   console.log("saat: 5")
+// } else if (hours == 6) {
+//   console.log("saat: 6")
+// } else if (hours == 7) {
+//   console.log("saat: 7")
+// } else if (hours == 8) {
+//   console.log("saat: 8")
+// } else if (hours == 9) {
+//   console.log("saat: 9")
+// } else if (hours == 10) {
+//   console.log("saat: 10")
+// } else {
+//   console.log("saat dışında bir rakam girildi")
+// }
+
+// //switch-case:okunabilirliği daha iyidir
+// switch (hours) {
+//   case 5:
+//     console.log("saat: 5")
+//     break;
+//   case 6:
+//     console.log("saat: 6")
+//     break;
+//   case 7:
+//     console.log("saat: 7")
+//     break;
+//   case 8:
+//     console.log("saat: 8")
+//     break;
+//   case 9:
+//     console.log("saat: 9")
+//     break;
+//   case 10:
+//     console.log("saat: 10")
+//     break;
+
+//   default:
+//     console.log("saat dışında bir rakam girildi")
+//     break;
+// }
+
+///////////////////////////////////////////////////////////////////
+//Loop: Sürekli kendini tekrar eden verilerde kolaylıkla sağlaması için kullanılır.
+
+console.log("********iterative for************")
+//1-) iterative for loop
+for (let i = 1; i <= 5; i++) {
+  console.log(i)
 }
 
-//switch-case:okunabilirliği daha iyidir
-switch (hours) {
-  case 5:
-    console.log("saat: 5")
-    break;
-  case 6:
-    console.log("saat: 6")
-    break;
-  case 7:
-    console.log("saat: 7")
-    break;
-  case 8:
-    console.log("saat: 8")
-    break;
-  case 9:
-    console.log("saat: 9")
-    break;
-  case 10:
-    console.log("saat: 10")
-    break;
+//sonsuz for döngüsü
+//for(;;){}
+console.log("********While************")
 
-  default:
-    console.log("saat dışında bir rakam girildi")
-    break;
+//2-) while loop
+let k = 1;
+while (k <= 5) {
+  console.log(k)
+  k++;
 }
+//sonsuz while döngüsü
+//while(true){}
+
+console.log("********Do-While************")
+
+//3-) do-while loop: şart sağlansın yada sağlanmasın en az 1 kez çalışır.
+let m = 1;
+do {
+  console.log(m)
+  m++;
+}
+while (m <= 5);
