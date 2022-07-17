@@ -514,3 +514,29 @@ if (hours == 5) {
 } else {
   console.log("saat dışında bir rakam girildi")
 }
+
+//switch-case:okunabilirliği daha iyidir
+switch (hours) {
+  case 5:
+    console.log("saat: 5")
+    break;
+  case 6:
+    console.log("saat: 6")
+    break;
+  case 7:
+    console.log("saat: 7")
+    break;
+  case 8:
+    console.log("saat: 8")
+    break;
+  case 9:
+    console.log("saat: 9")
+    break;
+  case 10:
+    console.log("saat: 10")
+    break;
+
+  default:
+    console.log("saat dışında bir rakam girildi")
+    break;
+}
