@@ -194,7 +194,7 @@ multiple comment
 // s4-) Bu sayılardan en büyüğü karekökünün üste yuvarlıyalım nedir ?
 // s5-) Bu sayılardan en küçüğü mutlak değeri nedir ?
 // s6-) Bu sayılardan en küçüğü alt taban en büyüğü üst taban şeklinde üstünü alalım
-console.log()
+//console.log()
 ////////////////////////////////////////////////////////////
 //JavaScript : interpreter(Yorumlayıcı)
 //SAYILAR
@@ -682,6 +682,273 @@ let dateSetTutorials = () => {
   tarih3.setSeconds(59);
   tarih3.setMilliseconds(999);
   console.log("Tarih 3: " + tarih3);
+}
+//dateSetTutorials();
+
+//////////////////////////////////////////////////////
+// DİZİLER
+// Verilerimizi bütün bir şekilde elimizde bulunmaktır. bunu kütüphane gibi düşünebiliriz.
+// Nasıl ki kütüphaneci binlerce kitap arasında istediği kitabı raflara dizdiğinden dolayı bulabiliyor.
+
+//dizide bir objedir.
+
+// Diziler ==> 1.Gösterim 
+// let dizi=[];
+
+// Diziler ==> 2.Gösterim 
+// let dizi=new Array();
+
+//let dizi=[]; ile  let dizi=new Array(); arasındaki fark nedir ? 
+// TARIK
+
+// DİKKAT Dizi
+// dizi elemanlarımıza sıfırıncı indiste başlıyoruz.
+
+// indisler sıfırdan başladığından dolayı son elemanda 1 çıkarmak zorundayız
+// dizimizde son elemana erişmek için: dizi.length-1 
+
+//boş bir dizi oluşturdum
+let dizi1 = [];
+
+///////////////
+let arrayTutorials = function () {
+  //boş bir dizi oluşturdum
+  let dizi2 = ['merhabalar', 44, "nasılsınız", 55.66, 'javascript', true];
+
+  // console.log
+  console.log(dizi2);
+
+  //dizi elemanlarına erişmek
+  document.writeln(dizi2[0] + ' ' + dizi2[5] + ' ' + dizi2[dizi2.length - 1])
+
+  const firstData = dizi2[1];
+  //string number boolean
+  document.writeln("<br/>" + typeof firstData)
 
 }
-dateSetTutorials();
+//arrayTutorials()
+
+//////////////
+let iterativeFor = () => {
+  //boş bir dizi oluşturdum
+  let dizi = ['merhabalar', 44, "nasılsınız", 55.66, 'javascript', true];
+
+  //iterative for -1
+  for (let i = 0; i <= dizi.length - 1; i++) {
+    document.writeln("<br/>" + dizi[i]);
+  }
+  document.writeln("<br/> +++++++++++++++++++")
+  //iterative for -2
+  for (let i = 0; i < dizi.length; i++) {
+    document.writeln("<br/>" + dizi[i]);
+  }
+}
+//iterativeFor();
+
+
+//////////////
+// for in: bize indis numarlarını verir.
+// for in: for over INdex
+let forInfunction = () => {
+  //boş bir dizi oluşturdum
+  let dizi = ['merhabalar', 44, "nasılsınız", 55.66, 'javascript', true];
+
+  //for in
+  for (temp in dizi) {
+    document.writeln("<br/>" + temp + ' ' + dizi[temp]);
+  }
+
+}
+//forInfunction();
+
+
+//////////////
+
+// for of: bize datayı verir
+// for of: for over Members
+// genellikle forOf tercih edilir forIN'e göre
+const forOffunction = () => {
+  //boş bir dizi oluşturdum
+  let dizi = ['merhabalar', 44, "nasılsınız", 55.66, 'javascript', true];
+
+  //for of
+  let counter = 1;
+  for (temp of dizi) {
+    document.writeln("<br/>" + counter + " " + temp);
+    counter++;
+  }
+
+}
+//forOffunction();
+
+//////////////////////////
+
+//Diziye Veri Ekleme
+const ArrayFunctions1 = () => {
+  // boş bir dizi oluşturdum
+  let dizi = ['merhabalar', 44];
+
+  // push() 
+  // dizimizin son elemanına ==> 1 tane veri eklemek
+  dizi.push("son eleman push");
+
+  //unshift()
+  // dizimizin ilk elemanına ==> 1 tane veri eklemek için
+  dizi.unshift("ilk eleman unshift");
+
+  for (temp of dizi) {
+    document.writeln("<br/>" + temp);
+  }
+}
+//ArrayFunctions1();
+
+//////////////////////////
+
+//Diziye Veri Çıkarmak
+const ArrayFunctions2 = () => {
+  // boş bir dizi oluşturdum
+  let dizi = ['ilk eleman', 44, "son eleman"];
+
+  // pop() 
+  // dizimizin son elemanına ==> 1 tane veri çıkarmak
+  dizi.pop();
+
+  //shift()
+  // dizimizin ilk elemanına ==> 1 tane veri çıkarrmak için
+  dizi.shift();
+
+  for (temp of dizi) {
+    document.writeln("<br/>" + temp);
+  }
+
+}
+//ArrayFunctions2();
+
+
+///////////////////////
+
+//sort() ==> elemanları küçükten büyüğe sıralama yapar.
+const ArrayFunctions3 = () => {
+  let dizi = ['a', "k", 'b'];
+
+  //dizi.sort()
+  dizi.sort();
+
+  for (temp of dizi) {
+    document.writeln("<br/>" + temp);
+  }
+}
+//ArrayFunctions3();
+
+
+//reverse() ==> elemanları ters sıralar.
+const ArrayFunctions4 = () => {
+  let dizi = ['a', "k", 'b'];
+
+  //dizi.reverse()
+  dizi.reverse();
+
+  for (temp of dizi) {
+    document.writeln("<br/>" + temp);
+  }
+}
+//ArrayFunctions4();
+
+//sort().reverse() ==> elemanları büyükten küçüğe sıralar.
+const ArrayFunctions5 = () => {
+  let dizi = ['a', "k", 'b'];
+
+  //dizi.reverse()
+  //dizi.sort();
+  //dizi.reverse();
+
+  dizi.sort().reverse();
+
+  for (temp of dizi) {
+    document.writeln("<br/>" + temp);
+  }
+}
+//ArrayFunctions5();
+
+
+/////////////////////////
+//function Array
+//1.Function
+function diziFunction() {
+  return ['kalem', 'Tükenmez']
+}
+
+let diziTemp = diziFunction();
+//console.log(diziTemp);
+
+//2.Function
+function sonucDizisi(temp) {
+  console.log(temp)
+}
+
+// Dizi içinde Array Function
+//sonucDizisi(diziFunction());
+
+///////////////////////
+//JSON
+let objectDizi = () => {
+
+  //data object
+  const data = {
+    adi: "Hamit",
+    "soyadi": "Mızrak"
+  }
+
+  let objectToString = JSON.stringify(data);
+  console.log(objectToString);
+
+  const adi = JSON.parse(objectToString).adi;
+  console.log(adi);
+
+  const soyadi = JSON.parse(objectToString).soyadi;
+  console.log(soyadi);
+}
+
+//objectDizi()
+
+///////////////////////
+//Diziyi String'e çevirmek
+let arrayToString = () => {
+
+  //data object
+  let dizi = ['java', "spring", 'mysql'];
+  console.log(dizi);
+
+  //dizideki verilerin hepsini büyük harfe çevirelim.
+  const changeData = dizi.toString().toUpperCase();
+  console.log(changeData);
+}
+//arrayToString();
+
+
+///////////////////////
+//string split ==> Diziyi split'e çevirmek
+let arraySplit = () => {
+
+  //string veriyi split yaptık
+  let kelime = "java +spring ~mysql &postgresql devops";
+  let data = kelime.split("+");
+
+  for (temp2 of data) {
+    document.writeln('<br/>' + temp2)
+  }
+
+  document.writeln("<br/>++++++++++++++++++++++++")
+
+  //data object
+  let dizi = ["java +spring ~mysql &postgresql devops"];
+  //console.log(dizi);
+
+  //Öncelikle Diziyi String'e çevirmek gerekiyor sonra split yapmamız gerekiyor.
+  let dizi2 = dizi.toString().split("+");
+  for (temp2 of dizi2) {
+    document.writeln('<br/>' + temp2)
+  }
+}
+arraySplit();
+
