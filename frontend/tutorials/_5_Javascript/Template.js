@@ -990,12 +990,48 @@ let arrayDelete = () => {
   document.writeln("<br/>"+dizi);
   //output: ,spring,mysql,rest
 }
-arrayDelete();
+//arrayDelete();
 
 
 ///////////////////////
-//splice
+//splice:hem ekleme hem silme yapabiliriz.
+let arraySplice = () => {
 
+  //data object
+  let dizi = ['java', "spring", 'mysql', 'rest','JaxRS'];
+  console.log(dizi);
+  //output: java,spring,mysql,rest,JaxRS
+
+  //dizi.splice(1);
+  //console.log(dizi);
+  ////1: başlama indisinden itibaren siler göster
+  ////output: spring,mysql,rest,JaxRS
+
+  //dizi.splice(1,3);
+  //console.log(dizi);
+  ////1: başlama indisi
+  ////3: tane veriyi silme (başlama indiside dahil etmelisin)
+  ////output: java,JaxRS
+
+ ////Verinin başına veri eklemek
+  //dizi.splice(0,0,'33');
+  //console.log(dizi);
+  //// 0  : başlama indisi
+  //// 0  :  adet silme sayısı
+  //// 33 : yerine gelecek data
+  ////output ilk veri: java,spring,mysql,rest,JaxRS
+  ////output son veri: 33,java,spring,mysql,rest,JaxRS
+
+   ////Veriye istediğimiz indiste istedimiz kadar silme işlemi
+   ////output: java,spring,mysql,rest,JaxRS
+   //dizi.splice(0,3,'44');
+   //console.log(dizi);
+   //// 0  : başlama indisi
+   //// 3  :  adet silme sayısı
+   //// 44 : yerine gelecek data
+
+}
+arraySplice();
 
 ///////////////////////
 //slice ==> Verdiğimiz indisten itibaren kopyalama yapar.
@@ -1009,6 +1045,13 @@ let arraySlice = () => {
   //output: java,spring,mysql,rest
 
   dizi = dizi.slice(1);
+  document.writeln("<br/>" + dizi);
+  console.log(dizi);
+  //output: spring,mysql,rest
+
+
+  //slice(0,2) ==> 0<=X<=2-1 indisi bana getir.
+  dizi = dizi.slice(0, 2);
   document.writeln("<br/>" + dizi);
   console.log(dizi);
   //output: spring,mysql,rest
