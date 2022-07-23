@@ -977,16 +977,41 @@ let arrayJoinConcat = () => {
 
 
 ///////////////////////
-//delete ==> Dizide belirlediğimiz indis'e göre veri silmek
+//delete ==> Dizide belirlediğimiz indis'e göre veri silmek ve yerine null yazmak
+//dikkat sildiği verinin yeri hala durur. ==> empty olarak gösterir. (Kalıntısı var)
 let arrayDelete = () => {
 
   //data object
-  let dizi = ['java', "spring", 'mysql'];
+  let dizi = ['java', "spring", 'mysql', 'rest'];
   document.writeln(dizi);
+//output: java,spring,mysql,rest
+
   delete  dizi[0];
   document.writeln("<br/>"+dizi);
-
+  //output: ,spring,mysql,rest
 }
 arrayDelete();
 
+
+///////////////////////
+//splice
+
+
+///////////////////////
+//slice ==> Verdiğimiz indisten itibaren kopyalama yapar.
+//dikkat clonlama yani belirtilen indis numarasından sonra kendisine kopyasını alır.
+let arraySlice = () => {
+
+  //data object
+  let dizi = ['java', "spring", 'mysql', 'rest'];
+  document.writeln(dizi);
+  console.log(dizi);
+  //output: java,spring,mysql,rest
+
+  dizi = dizi.slice(1);
+  document.writeln("<br/>" + dizi);
+  console.log(dizi);
+  //output: spring,mysql,rest
+}
+//arraySlice();
 
