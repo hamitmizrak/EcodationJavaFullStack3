@@ -950,5 +950,43 @@ let arraySplit = () => {
     document.writeln('<br/>' + temp2)
   }
 }
-arraySplit();
+//arraySplit();
+
+///////////////////////
+//string concat ==> Diziye son olarak ekler
+let arrayJoinConcat = () => {
+
+  //data object
+  let dizi = ['java', "spring", 'mysql'];
+  console.log(dizi);
+
+  //join: Her bir elemanın sonuna ekleme yapar
+  // bize string verisi döndürür.
+  dizi = dizi.join("+");
+  console.log(dizi);
+
+  //dizi.concat() ==> dizi elemanızın sonuna ekler
+  dizi = dizi.concat("INC");
+  console.log(dizi[dizi.length - 1])
+  for (temp2 of dizi) {
+    document.writeln(temp2)
+  }
+}
+//arrayJoinConcat();
+
+
+
+///////////////////////
+//delete ==> Dizide belirlediğimiz indis'e göre veri silmek
+let arrayDelete = () => {
+
+  //data object
+  let dizi = ['java', "spring", 'mysql'];
+  document.writeln(dizi);
+  delete  dizi[0];
+  document.writeln("<br/>"+dizi);
+
+}
+arrayDelete();
+
 
