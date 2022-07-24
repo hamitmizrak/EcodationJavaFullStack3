@@ -1211,11 +1211,47 @@ const tea = () => {
 console.log(`Doğum Tarihi: ${result.dogumTarihi()}`)
 console.log(`Emeklilik Kalan Zamanı: ${result.emekliYasi()}`)
 }//tea end
-tea();
+//tea();
 
 
+let callApplyBind=()=>{
+  //1- call apply bind
+//this kullandık
+let dataFunction=function(){
+  console.log("Değer: "+this.adi)
+  console.log(this);
+}
+
+//call apply bind :ENES
+let object={adi:"Hamit",soyadi:"Mızrak"};
+//dataFunction.call(object);
+//dataFunction.apply(object);
+dataFunction();
+
+let result5=dataFunction.bind(object);
+result5();
+}
+//callApplyBind();
 
 
+///////////////////////////////////////////
 
+const callApplyBindParameter=function(){
+  let dataFunction2=function(tekno2,tekno3){
+      console.log("Java teknolojileri: "+this.tekno1 +" "+tekno2+" "+tekno3)
+  }
+
+  let objectData={tekno1:"JavaME"}
+ // dataFunction2.call(objectData,"JavaSE","javaEE");
+ // dataFunction2.apply(objectData,["JavaSE","javaEE"]);
+ let result6=dataFunction2.bind(objectData,"JavaSE","javaEE");
+ result6()
+}
+
+callApplyBindParameter();
+
+
+///////////////////////////////////////////
+//DOM
 
 
