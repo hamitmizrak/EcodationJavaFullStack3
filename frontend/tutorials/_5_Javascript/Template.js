@@ -984,10 +984,10 @@ let arrayDelete = () => {
   //data object
   let dizi = ['java', "spring", 'mysql', 'rest'];
   document.writeln(dizi);
-//output: java,spring,mysql,rest
+  //output: java,spring,mysql,rest
 
-  delete  dizi[0];
-  document.writeln("<br/>"+dizi);
+  delete dizi[0];
+  document.writeln("<br/>" + dizi);
   //output: ,spring,mysql,rest
 }
 //arrayDelete();
@@ -998,7 +998,7 @@ let arrayDelete = () => {
 let arraySplice = () => {
 
   //data object
-  let dizi = ['java', "spring", 'mysql', 'rest','JaxRS'];
+  let dizi = ['java', "spring", 'mysql', 'rest', 'JaxRS'];
   console.log(dizi);
   //output: java,spring,mysql,rest,JaxRS
 
@@ -1013,7 +1013,7 @@ let arraySplice = () => {
   ////3: tane veriyi silme (başlama indiside dahil etmelisin)
   ////output: java,JaxRS
 
- ////Verinin başına veri eklemek
+  ////Verinin başına veri eklemek
   //dizi.splice(0,0,'33');
   //console.log(dizi);
   //// 0  : başlama indisi
@@ -1022,16 +1022,16 @@ let arraySplice = () => {
   ////output ilk veri: java,spring,mysql,rest,JaxRS
   ////output son veri: 33,java,spring,mysql,rest,JaxRS
 
-   ////Veriye istediğimiz indiste istedimiz kadar silme işlemi
-   ////output: java,spring,mysql,rest,JaxRS
-   //dizi.splice(0,3,'44');
-   //console.log(dizi);
-   //// 0  : başlama indisi
-   //// 3  :  adet silme sayısı
-   //// 44 : yerine gelecek data
+  ////Veriye istediğimiz indiste istedimiz kadar silme işlemi
+  ////output: java,spring,mysql,rest,JaxRS
+  //dizi.splice(0,3,'44');
+  //console.log(dizi);
+  //// 0  : başlama indisi
+  //// 3  :  adet silme sayısı
+  //// 44 : yerine gelecek data
 
 }
-arraySplice();
+//arraySplice();
 
 ///////////////////////
 //slice ==> Verdiğimiz indisten itibaren kopyalama yapar.
@@ -1057,4 +1057,165 @@ let arraySlice = () => {
   //output: spring,mysql,rest
 }
 //arraySlice();
+
+///////////////////////////////////////
+//Template Literal (ES6) 
+// Unutma: backtick yazarak işlem yapıyoruz.
+//1-multi line
+//2-interpolation
+//3-html template
+
+//1-multi line
+let data1 = "Merhabalar nasılsınız";
+// normal
+//console.log(data1 + " diğer");
+
+//multiline (Backtick)
+let data2 = `Merhabalar 
+nasılsınız`;
+//console.log(data2);
+
+//+++++++++++++++++++++++++++++++++
+
+//2-interpolation
+let adi = "Hamit";
+let soyadi = "Mızrak";
+//console.log("Adı: " + adi + " Soyadı: " + soyadi);
+
+//2-interpolation ==> UNUTMA: ```${}
+//console.log(`Adı: ${adi} Soyadı: ${soyadi}`)
+
+
+//+++++++++++++++++++++++++++++++++
+//3-html template
+let language1 = "Java";
+let language2 = "JavaScript";
+
+let result2 = () => {
+
+  //NORMAL
+  const htmlNormal =
+    "<ul>" +
+    "<li>" + language1 + "</li>" +
+    "<li>" + language2 + "</li>" +
+    "</ul>";
+  //document.body.innerHTML = htmlNormal;
+  document.getElementById("temp1").innerHTML = htmlNormal;
+
+  //HTML Template
+  const htmlTemplate = `
+<ul>
+      <li>${language1}</li>
+      <li>${language2}</li>
+</ul>
+`
+  //document.body.innerHTML = htmlTemplate;
+  document.getElementById("temp2").innerHTML = htmlTemplate;
+}
+//result2();
+
+
+
+/////////////////////////////////////////////////////
+//Object: Anlamlandırabileceğimiz her şeye denir.
+// let objectData={};
+// console.log(objectData);
+
+// let objectData2=new Object();
+// console.log(objectData2);
+
+// //let objectData={}; ikisi arasındaki fark let objectData2=new Object();  MELEK
+// //let dizi1=[];  let dizi2=new Array(); TARIK
+// let dizi1=[];
+// console.log(dizi1);
+
+// let dizi2=new Array();
+// console.log(dizi2);
+
+let personObject = () => {
+  let person = {
+    "adi": "Hamit",
+    "soyadi": "Mızrak",
+    "isLogin": true,
+    "hescode": "hescode-123",
+    "teknolojiDizi": ["Html5", "Css3", "Js", "Bootstrap"],
+    javaObjesi: {
+      "adı": "JavaSE",
+      "year": "1999"
+    }
+  };
+
+  //console
+  console.log(person);
+  console.log(person.adi.toLowerCase());
+  console.log(person.soyadi);
+  console.log(typeof person.soyadi);
+  console.log(person.isLogin);
+  console.log(person.hescode);
+  console.log(person.teknolojiDizi);
+  console.log(person.teknolojiDizi[0]);
+  console.log(person.javaObjesi);
+
+  //sonradan objeye attributes eklemek
+  person.meslek = "Bilgisayar Mühendisi";
+  console.log(person.meslek);
+  console.log(person.hescode);
+  console.log(person['hescode']);
+  //delete
+  //delete person.hescode
+  //console.log(person.hescode);
+
+  let allObject;
+  for (const key in person) {
+    allObject += person[key]
+  }
+  // alert(allObject)
+}
+//personObject();
+
+
+let stu = () => {
+  //CONSTRUCTUR
+  function Student(adi, soyadi, yas) {
+    this.adi = adi;
+    this.soyadi = soyadi;
+    this.yas = yas;
+    console.log(this);
+    this.birthday = function () {
+      //return 2022-yas;
+      return new Date().getFullYear() - yas;
+    }
+  }
+
+  let resultData = new Student("adı", "Soyadı", 25);
+  console.log(resultData.birthday());
+
+}
+//stu();
+
+const tea = () => {
+  let Teacher = function (adi, soyadi, yas){
+    this.adi = adi;
+    this.soyadi = soyadi;
+    this.yas = yas;
+    console.log(this);
+    this.dogumTarihi = function () {
+      return new Date().getFullYear() - yas;
+    };
+    this.emekliYasi=()=>{
+      return 60-yas;
+    }
+  }//Teacher function end
+
+  let result=new Teacher("adi","soyadi",25);
+console.log(`Doğum Tarihi: ${result.dogumTarihi()}`)
+console.log(`Emeklilik Kalan Zamanı: ${result.emekliYasi()}`)
+}//tea end
+tea();
+
+
+
+
+
+
 
