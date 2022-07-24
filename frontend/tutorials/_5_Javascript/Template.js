@@ -1248,10 +1248,37 @@ const callApplyBindParameter=function(){
  result6()
 }
 
-callApplyBindParameter();
+//callApplyBindParameter();
 
 
 ///////////////////////////////////////////
-//DOM
+// DOM
+// Document Object Model
+// web sayfalarımızda javascript üzerinden  HTML-CSS-JS yönetimini sağlar.
+// F12 Google Chrome önemlidir.
+
+function parag() {
+  let result = prompt("Lütfen birşey yazınız");
+  //id
+  //window.document.getElementById("paragId").innerHTML=result;
+  // document.getElementById("paragId").innerHTML=result;
+  // document.getElementById("paragId").innerText=result;
+
+  //className
+  // const className = "paragrafClass";
+  // const dom = document.getElementsByClassName(className)[0];
+  // dom.innerHTML = result;
+
+  //tagName
+  // const tagName = "p";
+  // const dom = document.getElementsByTagName(tagName)[0];
+  // dom.innerHTML = result;
+
+    //name
+    const nameDate = "paragrafName";
+    const dom = document.getElementsByName(nameDate)[0];
+    dom.innerHTML = result;
+
+}
 
 
