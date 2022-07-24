@@ -35,9 +35,9 @@
 
 </head>
 
-<body class="container">
+<body class="container bg-dark text-white">
 <!-- start codes -->
-<h1 class="text-primary">Ana Sayfa</h1>
+<h1 id="h1_id" class="text-primary">Ana Sayfa</h1>
 
 <!-- internal js -->
 <script>
@@ -77,9 +77,42 @@ Examples: jQuery , React(Facebook)
 
 <p id="paragId" class="paragrafClass" name="paragrafName"></p>
 
+<style>
+      #div_my_id{
+            background-color: orange;
+            color:white;
+            min-height: 15rem;
+            width: 100%;
+            padding:2rem;
+      }
+</style>
+<div id="div_my_id">
+       <div>Random:<span id="random_id"></span></div>
+      <button onclick="stop()" class="btn btn-danger mt-2">STOP</button>
+</div>
+
+<script>
+      const staticDivId=document.getElementById("div_my_id");
+      staticDivId.addEventListener("mousemove",eventFunctionData);
+
+      //event my function
+      function eventFunctionData(){
+            document.getElementById("random_id").innerHTML=Math.random();  
+            document.getElementById("random_id").style.color="blue";
+      }
+
+      //stop
+      function stop(){
+            staticDivId.removeEventListener("mousemove",eventFunctionData);
+      }
+ </script>
+
+
 <!-- ends codes -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+
 
 <!-- external js -->
 <script src="Template.js"></script>

@@ -1194,7 +1194,7 @@ let stu = () => {
 //stu();
 
 const tea = () => {
-  let Teacher = function (adi, soyadi, yas){
+  let Teacher = function (adi, soyadi, yas) {
     this.adi = adi;
     this.soyadi = soyadi;
     this.yas = yas;
@@ -1202,50 +1202,50 @@ const tea = () => {
     this.dogumTarihi = function () {
       return new Date().getFullYear() - yas;
     };
-    this.emekliYasi=()=>{
-      return 60-yas;
+    this.emekliYasi = () => {
+      return 60 - yas;
     }
   }//Teacher function end
 
-  let result=new Teacher("adi","soyadi",25);
-console.log(`Doğum Tarihi: ${result.dogumTarihi()}`)
-console.log(`Emeklilik Kalan Zamanı: ${result.emekliYasi()}`)
+  let result = new Teacher("adi", "soyadi", 25);
+  console.log(`Doğum Tarihi: ${result.dogumTarihi()}`)
+  console.log(`Emeklilik Kalan Zamanı: ${result.emekliYasi()}`)
 }//tea end
 //tea();
 
 
-let callApplyBind=()=>{
+let callApplyBind = () => {
   //1- call apply bind
-//this kullandık
-let dataFunction=function(){
-  console.log("Değer: "+this.adi)
-  console.log(this);
-}
+  //this kullandık
+  let dataFunction = function () {
+    console.log("Değer: " + this.adi)
+    console.log(this);
+  }
 
-//call apply bind :ENES
-let object={adi:"Hamit",soyadi:"Mızrak"};
-//dataFunction.call(object);
-//dataFunction.apply(object);
-dataFunction();
+  //call apply bind :ENES
+  let object = { adi: "Hamit", soyadi: "Mızrak" };
+  //dataFunction.call(object);
+  //dataFunction.apply(object);
+  dataFunction();
 
-let result5=dataFunction.bind(object);
-result5();
+  let result5 = dataFunction.bind(object);
+  result5();
 }
 //callApplyBind();
 
 
 ///////////////////////////////////////////
 
-const callApplyBindParameter=function(){
-  let dataFunction2=function(tekno2,tekno3){
-      console.log("Java teknolojileri: "+this.tekno1 +" "+tekno2+" "+tekno3)
+const callApplyBindParameter = function () {
+  let dataFunction2 = function (tekno2, tekno3) {
+    console.log("Java teknolojileri: " + this.tekno1 + " " + tekno2 + " " + tekno3)
   }
 
-  let objectData={tekno1:"JavaME"}
- // dataFunction2.call(objectData,"JavaSE","javaEE");
- // dataFunction2.apply(objectData,["JavaSE","javaEE"]);
- let result6=dataFunction2.bind(objectData,"JavaSE","javaEE");
- result6()
+  let objectData = { tekno1: "JavaME" }
+  // dataFunction2.call(objectData,"JavaSE","javaEE");
+  // dataFunction2.apply(objectData,["JavaSE","javaEE"]);
+  let result6 = dataFunction2.bind(objectData, "JavaSE", "javaEE");
+  result6()
 }
 
 //callApplyBindParameter();
@@ -1259,26 +1259,160 @@ const callApplyBindParameter=function(){
 
 function parag() {
   let result = prompt("Lütfen birşey yazınız");
-  //id
-  //window.document.getElementById("paragId").innerHTML=result;
-  // document.getElementById("paragId").innerHTML=result;
-  // document.getElementById("paragId").innerText=result;
+  setInterval(function () {
+    //id
+    //window.document.getElementById("paragId").innerHTML=result;
+    // document.getElementById("paragId").innerHTML=result;
+    // document.getElementById("paragId").innerText=result;
 
-  //className
-  // const className = "paragrafClass";
-  // const dom = document.getElementsByClassName(className)[0];
-  // dom.innerHTML = result;
+    //className
+    // const className = "paragrafClass";
+    // const dom = document.getElementsByClassName(className)[0];
+    // dom.innerHTML = result;
 
-  //tagName
-  // const tagName = "p";
-  // const dom = document.getElementsByTagName(tagName)[0];
-  // dom.innerHTML = result;
+    //tagName
+    // const tagName = "p";
+    // const dom = document.getElementsByTagName(tagName)[0];
+    // dom.innerHTML = result;
 
     //name
-    const nameDate = "paragrafName";
-    const dom = document.getElementsByName(nameDate)[0];
-    dom.innerHTML = result;
+    // const nameDate = "paragrafName";
+    // const dom = document.getElementsByName(nameDate)[0];
+    // dom.innerHTML = result;
 
+    //querySelector
+    //document.querySelector("#paragId").innerHTML = result;
+    //document.querySelector(".paragrafClass").innerHTML = result;
+    //document.querySelector("p").innerHTML = result;
+
+    //CSS 
+    window.document.getElementById("paragId").innerHTML = result;
+    // document.getElementById("paragId").style.color = "orange";
+    // document.getElementById("paragId").style.backgroundColor = "blue";
+    // document.getElementById("paragId").style.marginTop = "2rem";
+    // document.getElementById("paragId").style.padding = "1rem";
+
+  }, 2000);
 }
+
+//addEventListener 
+//kullanıcı bir olay gerçekleştiğinde sürekli dinleyen function
+//----- .addEventListener(olay,function,false)
+//1-A) Function olmadan direk çağırmak
+let result7 = document.getElementById("h1_id").addEventListener("click", function (e) {
+  alert("Tıklandı")
+}, false);
+
+//1-B) Function yazarak çağırmak
+function deneme7() {
+  let result7 = document.getElementById("h1_id").addEventListener("click", function (e) {
+    alert("Tıklandı")
+  }, false);
+}
+deneme7()
+//----- .removeEventListener(olay,function)
+//2-)
+
+//////////////////////////////////////////////////////////
+//jQuery 
+//jqeury hazır olduğunda çalışsın.
+//$(document).ready(function(){});
+//$(function(){});
+
+/*
+ Group Selector:
+ p{}     ==> tüm p'ler
+ div,p{} ==> tüm div'ler ve tüm p'ler
+ div p{} ==> div içindeki tüm p'ler
+ div>p{} ==> div içindeki tüm p'ler
+ div~p   ==>div ile p aynı seviyede tüm p'ler
+ div+p   ==>div ile p aynı seviyede tek p
+ */
+
+// window   ==> bütün neslere erişmek için kullanırız.
+// document ==> sadece o sayfaya erişim sağlarız.
+
+// npm  ==> senkron(Aynı anda sadece 1 işi yapar yeni işi bekletir)
+// yarn ==> Asenkron (Aynı anda birden fazla iş yapabiliyor daha hızlıdır.)
+
+// Framework: 
+// Önceden yazılmış hazır kodlar vardır.
+// Belli kuralları vardır bizden beklenen sadece bu kuralları yerine getirmektir. 
+// Projelerde daha hızlı ilerleriz. 
+// Examples: Angular(Microsoft),Vue
+
+// Libraries:
+// Önceden yazılmış hazır kodlar vardır.
+// Özgürüz Kullandığımız dili kullanarak kodlar yazabiliriz
+// Herşeyi kendimiz çağırdığımız için framework'e göre daha yavaş ilerleyebiliriz.
+// Examples: jQuery , React(Facebook)
+
+// JavaScript Kütühanesidir.
+// Daha az kodla daha fazla işlem yapmamıza olanak sağlar.
+// AJAX kullanacaksak native-javascriptte göre jQuery bize daha kolay gelecektir.
+// Google Netflix IBM Microsoft
+// jquery kullanırken: CDN (Content Delivery Network)  Tercihim bu.
+
+
+// jquery CDN unutma: head tagleri arasına yazalım.
+{/* 
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<script src="Template.js"></script>
+</body>
+</html> 
+*/}
+//JavaScript ==> çift tırnak kullanmak
+//jQuery     ==> tek tırnak kullanmak
+
+function jQueryFunction() {
+  let result = prompt("Lütfen birşey yazınız");
+
+  setInterval(function () {
+    //
+    //id ==> DOM - JQUERY HTML
+    // window.document.getElementById("paragId").innerHTML=result;
+    // document.getElementById("paragId").innerHTML=result;
+    $('#paragId').html(result);
+
+    //DOM - JQUERY TEXT
+    //document.getElementById("paragId").innerText=result;
+    // $('#paragId').text(result);
+
+    //className ==> DOM - JQUERY
+    //const className = "paragrafClass";
+    //document.getElementsByClassName(className)[0].innerHTML = result;
+    //$(".paragrafClass").html(result);
+
+    //tagName
+    //const tagName = "p";
+    //document.getElementsByTagName(tagName)[0].innerHTML = result;
+    //$(tagName).html(result);
+
+    //CSS  ==> DOM - JQUERY 
+    $('#paragId').html(result);
+    //document.getElementById("paragId").style.color = "orange";
+    // document.getElementById("paragId").style.backgroundColor = "blue";
+    // document.getElementById("paragId").style.marginTop = "2rem";
+    // document.getElementById("paragId").style.padding = "1rem";
+    // $('#paragId').css("backgroundColor","blue").css("marginTop","2rem").css("padding","1rem");
+
+    //jQuery css object
+    //$('#paragId').css(
+    //  { "backgroundColor": "blue", "marginTop": "2rem", "padding": "1rem" }
+    // );
+
+    //jQuery css object
+    const jqueryObject = { "backgroundColor": "blue", "marginTop": "2rem", "padding": "1rem" }
+    $('#paragId').css(jqueryObject);
+
+    //jquery addEventListener
+    $('#h1_id').click(function () { alert("jquery Tıklandı") })
+  }, 500);
+}
+jQueryFunction();
+
 
 
