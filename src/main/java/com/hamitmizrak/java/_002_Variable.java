@@ -15,7 +15,7 @@ public class _002_Variable {
      */
 
 
-    //camelCase
+/*    //camelCase
     String degiskenAdi;
 
     //Dolar veya altçizgi(_) ile başlayabiliriz. bunların hariçinde sayı veya özel singelerle başlanmaz
@@ -29,6 +29,5 @@ public class _002_Variable {
 
     //Değişkenler sayı ile başlamaz ancak sayı ile bitebilir.
     String 44_degiskenAdi;
-    String _degiskenAdi44;
-
+    String _degiskenAdi44;*/
 }
