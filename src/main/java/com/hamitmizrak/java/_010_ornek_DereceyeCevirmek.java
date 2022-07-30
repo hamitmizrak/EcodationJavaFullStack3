@@ -10,7 +10,5 @@ public class _010_ornek_DereceyeCevirmek {
         double f,c=0;
         f=c*9/5+32;
         System.out.println(f);
-
-
     }
 }
