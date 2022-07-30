@@ -79,8 +79,7 @@ public class _001_WhatIsJava {
     Yüksek seviyeli bir dili makinenin anlayacağını alt dillere çevirmesi olayıdır.
 
 
-
-     İnterpreter(Yorumlayıcı)
+    İnterpreter(Yorumlayıcı)
     -----------------------------------------------------
     Compiler sonucunda bir çıktı elde ederiz bu çıktı kaynak kod diyoruz. interpreter bu çıktıyı satır satır  yorumlayarak
     kodun çalışmasına olanak sağlıyor bunuda JVM dediğimiz bir teknolojiyle Cross-Paltform bir yapıya ulaştırıyor.
@@ -103,7 +102,7 @@ public class _001_WhatIsJava {
     -----------------------------------------------------
     java + compiler
 
-     JVM= interpreter,compiler(jit)
+    JVM= interpreter,compiler(jit)
     JRE=JVM+API+Libraries
     JDK=JRE+ Debug+Compiler
     JDK > JRE > JVM
@@ -133,9 +132,6 @@ public class _001_WhatIsJava {
    jar     = Java Archives
    war     = web Archives
    ZIP/WAR = sıkıştırılır.
-
-
-
 
      */
 }
