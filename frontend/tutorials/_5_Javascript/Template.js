@@ -1353,19 +1353,51 @@ deneme7()
 // Google Netflix IBM Microsoft
 // jquery kullanırken: CDN (Content Delivery Network)  Tercihim bu.
 
+// Why jQuery?
+// Google
+// Microsoft
+// IBM
+// Netflix
 
 // jquery CDN unutma: head tagleri arasına yazalım.
-{/* 
-<head>
+
+{/* <head>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <script src="Template.js"></script>
 </body>
 </html> 
-*/}
-//JavaScript ==> çift tırnak kullanmak
-//jQuery     ==> tek tırnak kullanmak
+*
+JavaScript ==> çift tırnak kullanmak
+jQuery     ==> tek tırnak kullanmak */}
+
+
+// val()
+// input taglerin value değerlerini almak istersek yani input içeriğine yazılanları almak istersek;
+
+// val  get
+// <input type="text" value="değer" />
+// alert( $("input").val() );
+
+// val => set
+// alert( $("input").val("değiştirdim") );
+
+// val()
+// <form>
+// <input type="text" name="adi" id="adi" />
+
+// <button id="gonder" name="gönder" onclick="online" > Gönder </button>
+// </form>
+
+// $(document).ready(function()){
+// val adim=$("#adi").val();
+// alert(adim);
+// }
+
+
+
+
 
 function jQueryFunction() {
   let result = prompt("Lütfen birşey yazınız");
@@ -1412,7 +1444,37 @@ function jQueryFunction() {
     $('#h1_id').click(function () { alert("jquery Tıklandı") })
   }, 500);
 }
-jQueryFunction();
+//jQueryFunction();
 
 
 
+
+//
+// HTML
+// <h4 id="jquery_id" class="mb-5 border">jquery </h4>
+//  <button class="btn btn-primary" onclick="dom_javascript()">DOM</button>
+//  <button class="btn btn-warning" onclick="dom_jquery()">jQuery</button>
+//
+//
+// JAVASCRIPT
+// function dom_javascript(){
+//  document.getElementById("jquery_id").innerHTML="<b><mark>JavaScript</mark></b>"
+// }
+// function dom_jquery(){
+//  // $(selector).attributes()
+// $('#jquery_id').html("<b><mark><i>jQuery</i></mark></b>")
+// }
+//
+// <!-- UNUTMA: önce sayfaların yüklenmesi için <script> </script> alt tarafa yazıyoruz. ancak
+// document.ready yazdığımızdan dolayı ister head tagleri arasında bile YAZABİLİRİZ
+// -->
+//
+// $(document).ready()
+// $(document).ready(function (){
+//   $(‘p’).html();      $(‘p’).text();     $(‘p’).css();
+// });
+//
+//
+// $(function (){
+//   $(‘p’).html();      $(‘p’).text();     $(‘p’).css();
+// });

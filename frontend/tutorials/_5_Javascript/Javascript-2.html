@@ -1,0 +1,104 @@
+<!doctype html>
+<html th:lang="${#locale.language}" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>JavaScript Html</title>
+    <!-- Turkce karakter -->
+    <meta charset="utf-8">
+
+    <!-- responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- seo -->
+    <meta name="keywords" content="html5,css3,js,jquery,bootstrap,react,javase"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- react libraries -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!--      <link rel="stylesheet"   th:href="@{/css/index.css}">-->
+    <!--      <script th:src="@{/js/index.js}"></script>-->
+</head>
+
+<body class="container bg-dark text-primary">
+<!-- start codes -->
+<h1 id="h1_id" class="text-primary">Ana Sayfa</h1>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#vki">
+    VKİ
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="vki" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4 class="text-center ">Vucut Kitle indeksi</h4>
+                <form action="#" method="get">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2">Kilo:</div>
+                            <div class="col-md-10">
+                                <div class="form-group">
+
+                                </div>
+                                <div class="col-md-2">Boy:</div>
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <input id="boy" type="text" class="form-control" placeholder="boyunuzu giriniz"
+                                               autofocus autocomplete="true"></div>
+                                </div>
+
+                                <div class="col-md-2"></div>
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <button id="vki_hesapla" class="btn btn-primary">Hesapla</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">Sonuc:</div>
+                                <div class="col-md-10">
+                                    <p id="sonuc"></p>
+                                    <p id="sonuc2"></p>
+                                </div>
+                            </div>
+                        </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ends codes -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+<!-- external js -->
+<script src="Template2.js"></script>
+</body>
+</html>
