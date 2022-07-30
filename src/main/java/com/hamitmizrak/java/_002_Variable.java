@@ -12,6 +12,9 @@ public class _002_Variable {
     Türkçedeki üğşçö kullanmayalım kullanırsak birşey olmaz ancak compilerdan sonra bu harflerin karşılığı yoksa hata verir
     String çözümDüğümü;
     Unicode Ascii code nedir ?
+    Değişken adları olarak rezerve edilmiş kelimler kullanamazsınız. Aşağıdaki kullanamazsınız
+    https://tr.wikibooks.org/wiki/Java/Anahtar_kelimeler
+
      */
 
 
@@ -30,4 +33,6 @@ public class _002_Variable {
     //Değişkenler sayı ile başlamaz ancak sayı ile bitebilir.
     String 44_degiskenAdi;
     String _degiskenAdi44;*/
+    String deneme;
+
 }
