@@ -1,7 +1,5 @@
 package com.hamitmizrak.java;
 
-import java.util.Scanner;
-
 public class _015_EscapeCharacter {
 
     public static void main(String[] args) {
