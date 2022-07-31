@@ -4,9 +4,7 @@ import java.util.Date;
 
 public class _013_System {
 
-    //psvm ===> TAB
     public static void main(String[] args) {
-
         //System
         //System.in    ==>  Javaya Veri girişi
         //System.out  ==> Javadan Veri çıkışı
@@ -22,6 +20,5 @@ public class _013_System {
 
         //logout
         System.exit(0);
-
     }
 }
