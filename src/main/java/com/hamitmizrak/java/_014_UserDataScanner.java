@@ -1,9 +1,8 @@
 package com.hamitmizrak.java;
 
-import java.util.Date;
 import java.util.Scanner;
 
-public class _014_UserData {
+public class _014_UserDataScanner {
 
     public static void main(String[] args) {
         //Scanner : java util paketinden gelir kullanıcıdan veri almak istediğimizde kullanırıız.
@@ -24,8 +23,5 @@ public class _014_UserData {
 
         //klavye kapat ancak bu satırdan sonra klavye çağırırsak hatalarla karşılaşırız.
         klavye.close();
-
-        // jOptionalPane
-
     }
 }
