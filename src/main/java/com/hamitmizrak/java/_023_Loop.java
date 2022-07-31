@@ -28,6 +28,5 @@ public class _023_Loop {
             System.out.print(m+" ");
             m++;
         }while(m<10);
-
     }
 }
