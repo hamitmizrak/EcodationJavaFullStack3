@@ -31,5 +31,28 @@ public class _018_Cast {
         Integer wrapper6=121389;
         int primitive6=wrapper6;
 
+        //6-) String'i  ==> Tam sayıya çevirmek
+        String str6="14";
+        System.out.println(16+str6);
+
+        //1.YOL: wrapper tür olarak veri döner
+        int stringToInteger1=Integer.valueOf(str6);
+        System.out.println(16+stringToInteger1);
+
+        //2.YOL: primitive türden veri döner
+        int stringToInteger2=Integer.parseInt(str6);
+        System.out.println(16+stringToInteger2);
+
+        //7-) Tam sayıyı ==> String'e çevirmek
+        int number7=20;
+        System.out.println(number7+"30");
+
+        //1.YOL: wrapper tür olarak veri döner
+        String cast7_1=String.valueOf(number7);
+        System.out.println(cast7_1+"30");
+
+        //2.YOL:
+        String cast7_2=Integer.toString(number7);
+        System.out.println(cast7_2+"30");
     }
 }
