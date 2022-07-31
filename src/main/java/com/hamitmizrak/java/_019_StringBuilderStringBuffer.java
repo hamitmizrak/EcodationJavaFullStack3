@@ -21,7 +21,7 @@ public class _019_StringBuilderStringBuffer {
         // 1-) güvensizdir               Daha güvenli
         // 1-) Asenkron                  Senkron(aynı anda sadece bir iş çalışır)
 
-        //3-) StringBuilder
+        //3-) StringBuilder: database,services,socket
         StringBuilder sb3=new StringBuilder();
         sb3.append(str1).append(str2).append(str3);
         String changeString3=sb3.toString();
@@ -32,6 +32,5 @@ public class _019_StringBuilderStringBuffer {
         sb4.append(str1).append(str2).append(str3);
         String changeString4=sb4.toString();
         System.out.println(changeString4);
-
     }
 }
