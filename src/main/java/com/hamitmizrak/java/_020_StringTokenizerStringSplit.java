@@ -28,6 +28,5 @@ public class _020_StringTokenizerStringSplit {
         while(parcala3.hasMoreTokens()){
             System.out.println(parcala3.nextToken());
         }
-
     }
 }
