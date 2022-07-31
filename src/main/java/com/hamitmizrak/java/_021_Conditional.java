@@ -2,9 +2,6 @@ package com.hamitmizrak.java;
 
 import lombok.extern.log4j.Log4j2;
 
-import java.util.Arrays;
-import java.util.StringTokenizer;
-
 @Log4j2
 public class _021_Conditional {
     public static void main(String[] args) {
@@ -22,6 +19,5 @@ public class _021_Conditional {
         //Ternary: daha yazılabilir. daha az kodla  gösterdik
         String resultTernary= (number>=10) ? "sayı 10 büyüktür":"sayı 10 küçüktür" ;
         System.out.println(resultTernary);
-
     }
 }
