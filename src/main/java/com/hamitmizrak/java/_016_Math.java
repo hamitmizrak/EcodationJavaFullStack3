@@ -33,6 +33,5 @@ public class _016_Math {
 
         //Rastgele
         System.out.println(Math.round(Math.random()*4+1));
-
     }
 }
