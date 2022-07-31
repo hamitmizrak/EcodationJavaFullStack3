@@ -2,7 +2,7 @@ package com.hamitmizrak.java;
 
 import java.util.Random;
 
-public class _016_Random {
+public class _017_Random {
     public static void main(String[] args) {
         //Math sınıf static bir yapıya sahiptir
         //Rastgele
