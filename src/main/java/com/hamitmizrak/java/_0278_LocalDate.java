@@ -15,7 +15,6 @@ import java.util.Locale;
 public class _0278_LocalDate {
 
     public static void main(String[] args) {
-
         //pattern
         Locale locale=new Locale("tr","TR");
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat("[dd - MMMM - yyyy] HH:mm:ss",locale);
@@ -54,7 +53,5 @@ public class _0278_LocalDate {
         DateTimeFormatter dateTimeFormatter=DateTimeFormatter.ofPattern("dd/MMMM/yyyy HH:mm:ss");
         String str3=dateTimeFormatter.format(LocalDateTime.now());
         System.out.println(str3);
-
-
      }
 }
