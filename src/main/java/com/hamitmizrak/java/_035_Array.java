@@ -28,7 +28,5 @@ public class _035_Array {
         for (    int temp : dizi  ) {
             System.out.print(temp+" ");
         }
-
     }
-
 }
