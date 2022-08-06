@@ -1,5 +1,7 @@
 # special data
 secret
+log
+memory_persist
 
 HELP.md
 target/
