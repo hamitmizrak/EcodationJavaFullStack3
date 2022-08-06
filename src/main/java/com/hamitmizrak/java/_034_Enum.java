@@ -43,7 +43,4 @@ class Olcu{
             System.out.print(temp+" ");
         }
     }
-
-
-
 }
