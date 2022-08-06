@@ -40,6 +40,5 @@ public class _031_TryCatchExceptionError {
         //throw: kendi ististinamızı oluşturduj
         //throw new ArithmeticException("Sıfıra Bölemezsiniz ikinci sayı sıfır olmamalıdır");
         throw new _032_HamitMizrak(" Sifira Bolemezsiniz ikinci sayi sifir olamalidir.");
-
     }
 }
