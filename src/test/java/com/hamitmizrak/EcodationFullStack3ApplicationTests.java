@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class EcodationFullStack3ApplicationTests {
 
-    private static String data="55";
+/*    private static String data="55";
     //Herşeyden önce
     @BeforeAll
     static void getBeforeAll(){
@@ -47,5 +47,5 @@ class EcodationFullStack3ApplicationTests {
   static void getAfterAll(){
         data=null;
         System.out.println("Herşeyden sonra ==> AfterAll"+data);
-    }
+    }*/
 }
