@@ -28,6 +28,7 @@ class MainClass{
        _038_Country.City city=new _038_Country.City();
        city.setCityName("Ankara");
 
+
         System.out.println("Ülke Adı: "+country.getCountryName()+" Şehir Adı: "+city.getCityName());
     }
 }
