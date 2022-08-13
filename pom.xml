@@ -31,9 +31,45 @@
     </properties>
 
 
-
     <!--dependencies-->
     <dependencies>
+
+        <!--  Prometheus: Prometheus için gerekli olacak -->
+        <!-- Prometheus:System %of Memoryconsumption ,of CPU consumption -->
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+
+        <!--devtools:otomatik compiler icin-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- web jar Bootstrap-->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>3.3.7-1</version>
+        </dependency>
+
+        <!-- web jar jquery-->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>3.3.1-1</version>
+        </dependency>
+
+        <!--mail send-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
 
         <!--Spring Web Mvc-->
         <dependency>
@@ -157,11 +193,6 @@
 
 
         <!-- Libraries Tools -->
-        <!--actuator-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
 
         <!--devtools-->
         <dependency>
