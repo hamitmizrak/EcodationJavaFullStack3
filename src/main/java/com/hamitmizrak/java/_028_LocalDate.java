@@ -53,5 +53,21 @@ public class _028_LocalDate {
         DateTimeFormatter dateTimeFormatter=DateTimeFormatter.ofPattern("dd/MMMM/yyyy HH:mm:ss");
         String str3=dateTimeFormatter.format(LocalDateTime.now());
         System.out.println(str3);
+
+
+        System.out.println(nowLlocalDate());
+        System.out.println(nowCalendarLocale());
      }
+
+    // date Turkish time
+    public static  String nowCalendarLocale() {
+        return new SimpleDateFormat("dd-MMMM-yyyy HH:mm:ss ",  new Locale("tr", "TR")).format(Calendar.getInstance().getTime());
+    }
+
+    public static String nowLlocalDate() {
+        return DateTimeFormatter.ofPattern("dd/MMMM/yyyy HH:mm:ss").format(LocalDateTime.now());
+    }
+
+
+
 }
