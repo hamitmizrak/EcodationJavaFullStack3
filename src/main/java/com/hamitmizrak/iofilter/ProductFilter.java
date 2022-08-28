@@ -8,6 +8,7 @@ import lombok.Setter;
 @Builder
 public class ProductFilter {
 
+    // object variable
     private Long id;
     private String name;
     private int price;
