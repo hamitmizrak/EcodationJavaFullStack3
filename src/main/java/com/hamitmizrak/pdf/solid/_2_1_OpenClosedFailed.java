@@ -1,4 +1,4 @@
-package com.hamitmizrak.solid;
+package com.hamitmizrak.pdf.solid;
 
 //Yeni Özelliklere Açık
 //var olan özellikleri değiştirmeye kapalı

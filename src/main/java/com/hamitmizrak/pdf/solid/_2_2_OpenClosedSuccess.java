@@ -1,6 +1,4 @@
-package com.hamitmizrak.solid;
-
-import lombok.extern.log4j.Log4j2;
+package com.hamitmizrak.pdf.solid;
 
 public interface _2_2_OpenClosedSuccess {
     //Gövdesiz  method

@@ -1,4 +1,4 @@
-package com.hamitmizrak.solid;
+package com.hamitmizrak.pdf.solid;
 
 //SOLID
 public class _1_SingleResponsibility {
