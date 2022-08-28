@@ -15,7 +15,6 @@ import java.net.Socket;
 
 public class TwoWayClient {
 
-
     //object variable
 
     //Mesaj almak
