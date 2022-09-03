@@ -8,25 +8,28 @@ import java.util.Scanner;
 public class _045_RecursiveFactoriyel {
 
     //User Data
-    private static int userData() {
+    private static char userData() {
         Scanner klavye = new Scanner(System.in);
         System.out.println("Lütfen bir sayı yazınız");
         char dataValue = klavye.nextLine().charAt(0);
-        return validationData(dataValue);
+        return dataValue;
     }
 
 //validation Data
-    private static int validationData(char dataValue){
+    private static int validationData(){
+        char dataValue=userData();
         if (Character.isDigit(dataValue))
-           return Character.getNumericValue(dataValue);
+            log.info("Bu bir sayıdır");
         else if (Character.isLetter(dataValue)) {
             log.info("Bu bir harftir");
-            userData();
+            validationData();
         } else{
             System.out.println("Bu bir özel simgedir");
-            userData();
+            validationData();
         }
-        return Character.getNumericValue(dataValue);
+        //return Character.getNumericValue(dataValue);
+        System.out.println(dataValue);
+        return Integer.valueOf(dataValue) ;
     }
 
 
@@ -42,8 +45,8 @@ public class _045_RecursiveFactoriyel {
     //PSVM
     public static void main(String[] args) {
   while(true){
-     int result1=userData();
-      int result2=recursiveFactoriyel(validationData((char) result1));
+      int result2=recursiveFactoriyel( validationData());
+     // int result2=recursiveFactoriyel(4);
       System.out.println(result2);
   }
     }

@@ -1,0 +1,25 @@
+Strict Mode
+Erişim ve atama (Getter ve Setter) metotları
+Rezerve kelimeler ve anahtarlar (Reserved Words & Property Keys)
+String.prototype.CharAt();
+Object.defineProperty()
+Object.keys()
+Object.getOwnPropertyNames()
+Object.create();
+Array.isArray()
+Array.forEach()
+Array.map()
+Array.filter()
+Array.reduce()
+Array.every()
+Array.indexOf()
+Array.lastIndexOf()
+Date.now()
+Date.prototype.toISOString();
+JSON.parse()
+JSON.stringify();
+…..prottype.toJSON();
+Function prototype.bind()
+Legal trailing commas
+Multiline string literals
+Object.getPrototypeOf(), Object.getOwnPropertyDescriptor(), Object.preventExtensions(), Object.isExtensible(), Object.seal(), Object.isSealed(), Object.freeze(), Object.isFrozen()
