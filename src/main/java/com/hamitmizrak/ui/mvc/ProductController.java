@@ -1,12 +1,12 @@
-package com.hamitmizrak.controller;
-import com.hamitmizrak.dto.ProductDto;
+package com.hamitmizrak.ui.mvc;
+import com.hamitmizrak.business.dto.ProductDto;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +14,12 @@ import java.util.List;
 
 @Controller
 @Log4j2
+@Transactional
 public class ProductController {
 
 
+
+    //FORM GET
     // http://localhost:8080/mvc1
     @GetMapping("mvc1")
     public String getThymeleaf1(Model model){
@@ -25,7 +28,7 @@ public class ProductController {
         return  "thymeleaf1";
     }
 
-
+    //FORM POST
     // http://localhost:8080/mvc2
     @GetMapping("mvc2")
     //@ResponseBody

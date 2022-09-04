@@ -1,4 +1,4 @@
-package com.hamitmizrak.dto;
+package com.hamitmizrak.business.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package com.hamitmizrak.dto;
+package com.hamitmizrak.business.dto;
 
 import lombok.Data;
 
@@ -21,7 +21,7 @@ public class RegisterDto {
 
     @NotEmpty(message = "Şifre boş geçilemez")
     @Size(min=5,max=10,message = "kullanıcı şifresi 5 ile 10 arasında olması gerekiyor.")
-    @Pattern( regexp =  "^[a-zA-Z0-9]{5}")
+    //@Pattern( regexp =  "^[a-zA-Z0-9]{5}")
     private String  password;
 
     //parametresiz constructor
