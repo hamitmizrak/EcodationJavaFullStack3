@@ -102,11 +102,12 @@ public class RegisterController {
             writerDataFile(registerDto);
             //DATABASE
             RegisterEntity registerEntity = RegisterEntity.builder()
-                    .name(registerDto.getName()).email(registerDto.getEmail()).password(registerDto.getEmail())
+                    .name(registerDto.getName()).email(registerDto.getEmail()).password(registerDto.getPassword())
                     .build();
             repository.save(registerEntity);
         }
-        return "success";
+        //return "success";
+        return "redirect:/list/register";
     }
 
     //LIST

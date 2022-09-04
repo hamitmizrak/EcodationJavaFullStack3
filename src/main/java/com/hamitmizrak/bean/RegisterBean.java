@@ -14,7 +14,7 @@ public class RegisterBean {
 
     @Bean
     public void registerData(){
-        for (int i = 1; i <=20 ; i++) {
+        for (int i = 1; i <=5 ; i++) {
             RegisterEntity registerEntity=RegisterEntity.builder().name("adi "+i).email("email"+i+"@xyz.com").password("Hm12"+i). build();
             repository.save(registerEntity);
         }

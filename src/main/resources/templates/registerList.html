@@ -35,13 +35,12 @@
 
     <!-- dataTables CSS: paging and sorting -->
     <link rel="stylesheet" 	type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.css" />
-
 </head>
 
 
 <body class="container">
     <!-- start codes -->
-<h2 th:text="#{register.list}"></h2>
+<h2 class="display-4 text-center mt-5" th:text="#{register.list}"></h2>
     <hr/>
     <a th:href="@{/create/register}" class="btn btn-primary" th:text="#{register.create}"></a>
     <a th:href="@{/register/speed/data}" class="btn btn-primary" th:text="#{register.speed}"></a>
