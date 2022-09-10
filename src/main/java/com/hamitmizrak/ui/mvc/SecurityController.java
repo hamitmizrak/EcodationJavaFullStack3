@@ -53,15 +53,12 @@ public class SecurityController {
     public String getLogin(HttpServletRequest request, HttpServletResponse response, Model model) {
         Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
         //sistemde bir kulllanıcı varsa
-        if(authentication=null){
+        if(authentication!=null){
             new SecurityContextLogoutHandler().logout(request,response,authentication);
             model.addAttribute("logout_key","Çıkış Yapıldı");
         }else{
-            model.addAttribute("logout_key","Çıkış Yapıldı");
+            model.addAttribute("logout_key","Sistemde kullanıcı yoktur");
         }
-
       return "logout";
     }
-
-
 }

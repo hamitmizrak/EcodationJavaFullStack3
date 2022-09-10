@@ -24,14 +24,15 @@ public class SecurityProject extends WebSecurityConfigurerAdapter {
 
         //ilgili sayfalara yetkilendirme yapacam
         http.authorizeRequests()
-                .antMatchers("/","/index","/login").permitAll()
+                .antMatchers("/","/index","/login","/logout").permitAll()
                 .antMatchers("/security/index","/security/success").permitAll()
-                .anyRequest().authenticated().and().formLogin();
+                .anyRequest().authenticated().and().formLogin()
+                //eğer loginPAge yazmazsanız logout çağırdığımızda spring kendi logout page açacaktır.
+                .loginPage("/login");
     }
 
     //@Autowired
     PasswordEncoderBean passwordEncoderBean;
-
     @Autowired
     public SecurityProject(PasswordEncoderBean passwordEncoderBean) {
         this.passwordEncoderBean = passwordEncoderBean;
@@ -51,6 +52,5 @@ public class SecurityProject extends WebSecurityConfigurerAdapter {
                 .password(passwordEncoderBean.passwordEncoderMethod()
                         .encode("root"))
                 .roles("ADMIN");
-
     }
 }
