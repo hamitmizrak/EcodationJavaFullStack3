@@ -28,11 +28,11 @@ public class SecurityController {
         return "success";
     }
 
-    //private (secret)
-    // http://localhost:8080/security/private
-    @GetMapping("/security/private")
+    //private (secret Admin Page)
+    // http://localhost:8080/security/admin
+    @GetMapping("/admin")
     public String getPrivate() {
-        return "privatePage";
+        return "admin";
     }
 
      //http://localhost:8080/login
