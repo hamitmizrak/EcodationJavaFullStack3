@@ -1,17 +1,19 @@
 package com.hamitmizrak.business.dto;
-
 import lombok.Data;
-
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 
+//lombok
 @Data
-public class RegisterDto {
+public class RegisterDto implements Serializable {
+public static final long serialVersionUID = 1L;
 
     private Long id;
 
+    //validation
     @NotEmpty(message = "adı boş geçilemez")
     private String  name;
 
@@ -25,8 +27,7 @@ public class RegisterDto {
     private String  password;
 
     //parametresiz constructor
-    public RegisterDto() {
-    }
+    public RegisterDto() {}
 
     //parametreli constructor
     public RegisterDto(Long id, String name, String email, String password) {

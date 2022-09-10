@@ -33,16 +33,17 @@
     <link rel="stylesheet"   th:href="@{/css/index.css}">
     <script th:src="@{/js/index.js}"></script>
 
+    <!-- dataTables CSS: paging and sorting -->
+    <link rel="stylesheet" 	type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.css" />
 </head>
 
 
 <body class="container">
     <!-- start codes -->
-<h2 th:text="#{register.list}"></h2>
+<h2 class="display-4 text-center mt-5" th:text="#{register.list}"></h2>
     <hr/>
     <a th:href="@{/create/register}" class="btn btn-primary" th:text="#{register.create}"></a>
-    <a th:href="@{/register/speed/data}" class="btn btn-success" th:text="#{register.speed}"></a>
-    <a th:href="@{/list/register}" class="btn btn-warning" th:text="#{register.list}"></a>
+    <a th:href="@{/register/speed/data}" class="btn btn-primary" th:text="#{register.speed}"></a>
 
 
     <table class="table table-hover table-striped" id="datalistregisterTable">
@@ -58,18 +59,16 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:if="${register.id>0}" th:each="register:${register_find}">
+        <tr th:if="${register.id>0}" th:each="register:${register_client_list}">
             <td th:text="${register.id}"></td>
             <td th:text="${register.name}"></td>
             <td th:text="${register.email}"></td>
             <td th:text="${register.password}"></td>
-            <td><a th:href="@{/update/register/{id}(id=${register.id})}" th:text="#{register.update}"> <i class="fa-solid fa-wrench"></i> </a></td>
-            <td><a th:href="@{ /find/register/{id}(id=${register.id})}" th:text="#{register.show}"></a> <i class="fa-solid fa-eye btn-sm"></i> </td>
-           <td> <a class="btn btn-danger" th:onclick="'deleteSweetAlertRegister(\'/delete/register/' + ${register.id} +'\')'">
+            <td><a class="btn btn-primary" th:href="@{/update/register/{id}(id=${register.id})}"> <i class="fa-solid fa-wrench"></i> </a></td>
+            <td><a class="btn btn-success" th:href="@{ /find/register/{id}(id=${register.id})}"><i class="fa-solid fa-eye btn-sm"></i> </a> </td>
+            <td> <a class="btn btn-danger" th:onclick="'deleteSweetAlertRegister(\'/delete/register/' + ${register.id} +'\')'">
                 <i class="fa-solid fa-trash-can"></i></a>
             </td>
-
-        </tr>
         </tbody>
     </table>
 

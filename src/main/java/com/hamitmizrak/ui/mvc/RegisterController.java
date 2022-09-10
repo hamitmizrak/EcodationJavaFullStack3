@@ -6,7 +6,6 @@ import com.hamitmizrak.data.entity.RegisterEntity;
 import com.hamitmizrak.data.repository.IRegisterRepository;
 import com.hamitmizrak.exception.ResourceNotFoundException;
 import lombok.extern.log4j.Log4j2;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -69,6 +68,7 @@ public class RegisterController {
 
 
     //Speed Data Create
+    // http://localhost:8080/register/speed/data
     @GetMapping("register/speed/data")
     public String getAllData() {
         for (int i = 1; i <=10 ; i++) {
@@ -86,7 +86,7 @@ public class RegisterController {
     @GetMapping("/create/register")
     public String validationGetForm(Model model) {
         model.addAttribute("register_validation", new RegisterDto());
-        return "registerCreate";
+        return "registerApiCreate";
     }
 
     //POST FORM
@@ -95,7 +95,7 @@ public class RegisterController {
     public String validationPostForm(@Valid @ModelAttribute("register_validation") RegisterDto registerDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             log.error("Hata var" + bindingResult);
-            return "registerCreate";
+            return "registerApiCreate";
         } else {
             log.error("Kayıt Başarılı");
             //FILES
@@ -119,7 +119,7 @@ public class RegisterController {
         model.addAttribute("register_list",list);
         list.forEach(temp -> {System.out.println(temp);});
         log.info(list);
-        return "registerList";
+        return "registerApiList";
     }
 
     //FIND
@@ -131,11 +131,11 @@ public class RegisterController {
         Optional<RegisterEntity>  findData=repository.findById(id);
         if(findData.isPresent()) {
             model.addAttribute("register_find",findData.get());
-            return    "registerDetailPage";
+            return "registerApiDetailPage";
         }else{
             model.addAttribute("register_find",id+" numaralı id bulunamadı");
         }
-        return  "registerDetailPage";
+        return "registerApiDetailPage";
     }
 
     //FIND
@@ -166,11 +166,11 @@ public class RegisterController {
         RegisterEntity registerEntityFind=   repository.findById(id).orElseThrow(()->new ResourceNotFoundException(id+" numaralı register bulunamadı"));
         if(registerEntityFind!=null){
             model.addAttribute("register_update",registerEntityFind);
-            return "registerUpdate";
+            return "registerApiUpdate";
         }else{
             model.addAttribute("not_found",id+" numaralı veri bulunamadı");
         }
-        return "registerList";
+        return "registerApiList";
     }
 
     //UPDATE  POST FORM
@@ -180,7 +180,7 @@ public class RegisterController {
                                          @Valid @ModelAttribute("register_update") RegisterDto registerDto,BindingResult bindingResult ){
         if(bindingResult.hasErrors()){
             log.error("HATA:"+bindingResult);
-            return "registerUpdate";
+            return "registerApiUpdate";
         }
         RegisterEntity registerEntity=modelMapperBean.modelMapperMethod().map(registerDto,RegisterEntity.class);
         repository.save(registerEntity);

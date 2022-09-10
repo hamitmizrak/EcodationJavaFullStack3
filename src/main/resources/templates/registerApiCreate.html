@@ -1,7 +1,7 @@
 <!doctype html>
 <html  th:lang="${#locale.language}"  xmlns:th="http://www.thymeleaf.org" >
 <head>
-    <title>Register Update</title>
+    <title>Register Create</title>
     <!-- Turkce karakter -->
     <meta charset="utf-8">
 
@@ -33,25 +33,15 @@
     <link rel="stylesheet"   th:href="@{/css/index.css}">
     <script th:src="@{/js/index.js}"></script>
 
-    <!-- dataTables CSS: paging and sorting -->
-    <link rel="stylesheet" 	type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.css" />
 </head>
 
 <body class="container">
     <!-- start codes -->
 <h1> FORM</h1>
 
-<!--
-    this.id = id;
-    this.name = name;
-    this.email = email;
-    this.password = password;
-    -->
-
     <div class="container">
         <div class="row">
-            <form th:action="@{/update/register/{id}(id=${register_update.id})}" th:object="${register_update}"  th:method="post">
-                <!--SONRA-->
+            <form th:action="@{/create/register}" th:object="${register_validation}"  th:method="post">
                 <div class="col-md col-sm">
                     <div class="form-group">
                         <input type="text" class="form-control mb-4 mt-5"  placeholder="Adınız" autofocus  name="name"  th:field="*{name}" />
