@@ -7,12 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class SecurityController {
+ // private Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
 
     //public (index)
     // http://localhost:8080/security/index
@@ -22,17 +24,36 @@ public class SecurityController {
     }
 
     //public (success)
-    // http://localhost:8080/security/success
-    @GetMapping("/security/success")
+    // http://localhost:8080/success
+    @GetMapping("/success")
     public String getSuccess() {
         return "success";
     }
 
     //private (secret Admin Page)
-    // http://localhost:8080/security/admin
+    // http://localhost:8080/admin
     @GetMapping("/admin")
-    public String getPrivate() {
+    public String getPrivate(Model model) {
+        //sistemdeki kullanıcıyı Admin sayfasına yönlendirdik
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        String user="";
+        if(authentication!=null){
+            user=authentication.getName();
+        }
+        model.addAttribute("user_key",user);
         return "admin";
+    }
+
+    // http://localhost:8080/user
+    @GetMapping("/user")
+    @ResponseBody
+    public String getUser(){
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        String user="";
+        if(authentication!=null){
+            user=authentication.getName();
+        }
+        return "Hoşgeldiniz:"+user;
     }
 
      //http://localhost:8080/login
@@ -50,8 +71,9 @@ public class SecurityController {
     //http://localhost:8080/logout
     @GetMapping("/logout")
     public String getLogin(HttpServletRequest request, HttpServletResponse response, Model model) {
-        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+
         //sistemde bir kulllanıcı varsa
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
         if(authentication!=null){
             new SecurityContextLogoutHandler().logout(request,response,authentication);
             model.addAttribute("logout_key","Çıkış Yapıldı");

@@ -25,7 +25,7 @@ public class SecurityProject extends WebSecurityConfigurerAdapter {
         //ilgili sayfalara yetkilendirme yapacam
         http.authorizeRequests()
                 .antMatchers("/","/index","/login","/logout").permitAll()
-                .antMatchers("/security/index","/security/success").permitAll()
+                .antMatchers("/security/index","/success").permitAll()
                 .anyRequest().authenticated().and()
                 .formLogin()
                 //eğer loginPAge yazmazsanız logout çağırdığımızda spring kendi logout page açacaktır.
