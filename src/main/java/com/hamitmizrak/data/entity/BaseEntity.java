@@ -20,7 +20,6 @@ abstract public class BaseEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
     @Column(name = "created_date")
