@@ -47,7 +47,6 @@ public class SecurityController {
          return "login";
      }
 
-
     //http://localhost:8080/logout
     @GetMapping("/logout")
     public String getLogin(HttpServletRequest request, HttpServletResponse response, Model model) {

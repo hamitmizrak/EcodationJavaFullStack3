@@ -29,7 +29,23 @@
 
 <body class="container">
     <!-- start codes -->
-    <h1 class="text-primary">Login Sayfası</h1>
+    <h1 class="text-primary mt-5 display-6 text-capitalize text-center">Login Sayfası</h1>
+    <p th:text="${login_key}" class="text-danger"></p>
+    <!--Spring Security Login sayfasınının backend eklentilerini ekliyoruz-->
+    <form th:action="@{/login}" method="post" th:name="login">
+        <!--hidden input-->
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+
+        <!--username-->
+        <input type="text" class="form-control mb-4" th:name="username" id="username" required placeholder="Kullanıcı Adınız" autofocus/>
+
+        <!--password-->
+        <input type="password" class="form-control mb-4" th:name="password" id="password" required placeholder="Kullanıcı Şifreniz" />
+
+        <!--reset submit-->
+        <button type="reset" class="btn btn-danger">Temizle</button>
+        <button type="submit" class="btn btn-primary">Gönder</button>
+    </form>
 
     <!-- ends codes -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
